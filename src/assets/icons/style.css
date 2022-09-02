@@ -1,0 +1,102 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?49g39r');
+  src:  url('fonts/icomoon.eot?49g39r#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?49g39r') format('truetype'),
+    url('fonts/icomoon.woff?49g39r') format('woff'),
+    url('fonts/icomoon.svg?49g39r#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-amused-face-closed-eyes:before {
+  content: "\e900";
+}
+.icon-amused-face-closed-eyes1:before {
+  content: "\e901";
+}
+.icon-dot-single:before {
+  content: "\e902";
+}
+.icon-sort:before {
+  content: "\e903";
+}
+.icon-more-vertical:before {
+  content: "\e904";
+}
+.icon-more-horizontal:before {
+  content: "\e905";
+}
+.icon-filter:before {
+  content: "\e906";
+}
+.icon-list:before {
+  content: "\e907";
+}
+.icon-tablet:before {
+  content: "\e908";
+}
+.icon-bar-chart-2:before {
+  content: "\e909";
+}
+.icon-users:before {
+  content: "\e90a";
+}
+.icon-chevron-down:before {
+  content: "\e90b";
+}
+.icon-search:before {
+  content: "\e90c";
+}
+.icon-plus:before {
+  content: "\e90d";
+}
+.icon-alert-circle:before {
+  content: "\e90e";
+}
+.icon-pie-chart:before {
+  content: "\e90f";
+}
+.icon-settings:before {
+  content: "\e910";
+}
+.icon-home:before {
+  content: "\e911";
+}
+.icon-grid:before {
+  content: "\e912";
+}
+.icon-apps:before {
+  content: "\e912";
+}
+.icon-squares:before {
+  content: "\e912";
+}
+.icon-blocks:before {
+  content: "\e912";
+}
+.icon-dot-circle-o:before {
+  content: "\e913";
+}
+.icon-comments-o:before {
+  content: "\e914";
+}
+.icon-user-secret:before {
+  content: "\e915";
+}

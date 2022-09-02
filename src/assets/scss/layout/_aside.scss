@@ -1,0 +1,92 @@
+/*sidebar css*/
+
+//sidebar-header css
+.aside-wrapper {
+  width: $aside-width;
+  flex-shrink: 0;
+  background-color: $aside-bg;
+  @include media-breakpoint-down(xl){
+    width: 250px;
+  }
+  @include media-breakpoint-down(lg) {
+    width: 100%;
+  }
+ 
+}
+
+//user profile css
+.brand-logo {
+  height: auto;
+  width: 35px;
+  flex-shrink: 0;
+  background-color: $aside-bg;
+  //media query
+
+ 
+  //image profile css
+  .logo {
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    //media query
+    @include media-breakpoint-down(lg) {
+      text-align: center;
+    }
+   
+  }
+}
+
+//aside image
+.overlay-image {
+  height: auto;
+  max-width: 250px;
+  @include position($bottom: 50px, $left: 120px);
+  z-index: 99;
+  @include media-breakpoint-down(xl) {
+    height: auto;
+    max-width: 225px;
+    @include position($bottom:50px,$left:85px);
+  }
+}
+
+//circle
+.circle-lg {
+  @extend %circle;
+  @include position($top: 0, $right: -30px);
+  height: 75px;
+  width: 75px;
+  //media query
+  @include media-breakpoint-down(md) {
+    @include position($top: -5px, $right: 0);
+  }
+}
+
+.circle-md {
+  @extend %circle;
+  @include position($top: 200px, $right: -25px);
+  height: 50px;
+  width: 50px;
+  //media query
+  @include media-breakpoint-down(md) {
+    @include position($top: 115px, $right: -5px);
+  }
+}
+
+.circle-sm {
+  @extend %circle;
+  @include position($top: 120px, $left: 0);
+  height: 35px;
+  width: 35px;
+  //media query
+  @include media-breakpoint-down(md) {
+    height: 40px;
+    width: 40px;
+    @include position($top: 70px, $right: -5px);
+  }
+}
+
+//aside image
+.aside-image {
+  height: 200px;
+  width: 200px;
+}
