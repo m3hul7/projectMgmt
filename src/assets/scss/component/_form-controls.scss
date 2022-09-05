@@ -11,7 +11,7 @@
 //             cursor: not-allowed;
 //         }
 
-//         ~label {
+//         +label {
 //             padding: 0.75rem 0 1.5rem 1.5rem;
 //             height: auto;
 
@@ -22,7 +22,7 @@
 //             }
 //         }
 
-//         &:focus~label>.label-floating-text {
+//         &:focus+label>.label-floating-text {
 //             color: $primary;
 //         }
 //     }
@@ -37,7 +37,7 @@
 
 //             &:focus,
 //             &:not(:placeholder-shown) {
-//                 ~label>.label-floating-text {
+//                 +label>.label-floating-text {
 //                     color: $danger;
 //                 }
 //             }
@@ -266,9 +266,40 @@
     background-color: $secondary;
     &:focus {
         outline: none;
-
+        caret-color: $light; 
     }
 }
+#fav-projects-checkbox:checked {
+    ~ .favorite-projects {
+        display: none;
+    }
+    + .projects-title label {
+        transition: $transition-time;
+        transform: rotate(180deg);
+    }
+}
+#all-projects-checkbox:checked {
+    ~ .all-projects {
+        display: none;
+    }
+    + .projects-title label {
+        transition: $transition-time;
+        transform: rotate(180deg);
+    }
+} 
+#archive-projects-checkbox:checked {
+    ~ .archive-projects {
+        display: none;
+    }
+    + .projects-title label {
+        transition: $transition-time;
+        transform: rotate(180deg);
+    }
+} 
+.projects-title label {
+    transition: $transition-time;
+}
+
 
 // #search {
 //     border: none;

@@ -1,19 +1,26 @@
 // Typographical styles goes here
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
-textarea {
-    resize: none;
-}
-// Dashboard
 body{
     font-size: 1rem;
-    @include media-breakpoint-down(sm){
-        font-size: $font-size-base-sm;
-    }
+    color: $light;
 }
-// Author: Pooja Manvani
-// Start: My-patients text style.
-.text-desc {
-    font-size: 12px;
-}
-// End: My-patients text style.
+
+// // Typographical styles goes here
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+// textarea {
+//     resize: none;
+// }
+// // Dashboard
+// body{
+//     font-size: 1rem;
+//     @include media-breakpoint-down(sm){
+//         font-size: $font-size-base-sm;
+//     }
+// }
+// // Author: Pooja Manvani
+// // Start: My-patients text style.
+// .text-desc {
+//     font-size: 12px;
+// }
+// // End: My-patients text style.

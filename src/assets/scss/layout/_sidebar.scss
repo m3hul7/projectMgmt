@@ -2,10 +2,11 @@
 #sidebar {
     flex: 0 0 $sidebar-width;
 }
-.nav-brand-logo {
+.nav-brand-logo, .profile-logo {
     color: $danger;
     font-size: $sidebar-logo-size;
 }
+
 .nav {
     &-link:hover {
         color: $danger;
