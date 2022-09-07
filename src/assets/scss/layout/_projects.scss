@@ -4,3 +4,29 @@
     flex: 0 0 $project-list-width;
     border-right: .25rem solid $secondary;
 }
+
+// task management stylesheet
+.tasks-style {
+    .filter-view {
+        border-bottom: .25rem solid $secondary;
+        &-menu {
+            cursor: pointer;
+            border-radius: .75rem;
+        }
+    }
+}
+
+// project view stylesheet
+.project-view-style {
+    .project-tab {
+        border-bottom: 2px solid $secondary;
+        &-menu {
+            cursor:pointer;
+            border-bottom: 2px solid transparent;
+        }
+        &-menu:hover {
+            transition: .4s all;
+            border-bottom: 2px solid $light;
+        }
+    }
+}

@@ -1,25 +1,49 @@
 
-<div class="row py-3 px-4 mx-0">
-    <div class="col-6 p-0">
-        <div class="d-inline">
-            <span class="icon-tablet"></span>
-            <span>Table</span>
-        </div>
-        <div class="d-inline">
-            <span class="icon-list"></span>
-            <span>List View</span>
-        </div>
-    </div>
-    <div class="col-6 p-0">
-        <div class="d-flex justify-content-end">
-            <div class="d-inline ">
-                <span class="icon-filter"></span>
-                <span>Filter</span>
-            </div>
-            <div class="d-inline">
-                <span class="icon-sort"></span>
-                <span>Sort by</span>
+<div class="tasks-style d-flex flex-column h-100">
+    <!-- filter-view-menu -->
+    <div class="filter-view row py-3 px-4 mx-0">
+        <div class="col-6 p-0">
+            <div class="d-flex">
+                <div class="filter-view-menu bg-secondary p-2">
+                    <span class="icon-tablet"></span>
+                    <span class="ps-1">Table</span>
+                </div>
+                <div class="filter-view-menu bg-secondary p-2 ms-2">
+                    <span class="icon-list"></span>
+                    <span class="ps-1">List View</span>
+                </div>
             </div>
         </div>
+        <div class="col-6 p-0">
+            <div class="d-flex justify-content-end">
+                <div class="filter-view-menu bg-secondary p-2">
+                    <span class="icon-filter"></span>
+                    <span class="ps-1">Filter</span>
+                </div>
+                <div class="filter-view-menu bg-secondary p-2 ms-2">
+                    <span class="icon-sort"></span>
+                    <span class="ps-1">Sort by</span>
+                </div>
+            </div>
+        </div>
     </div>
+    <div class="d-flex flex-grow-1">
+        <div class="col-5 flex-grow-1">
+            <app-task-presentation>New Tasks</app-task-presentation>
+        </div>
+        
+        <div class="col-5 flex-grow-1">
+            <app-task-presentation>New Tasks</app-task-presentation>
+        </div>
+        
+        <div class="col-5 flex-grow-1">
+            <app-task-presentation>New Tasks</app-task-presentation>
+        </div>
+    </div>
+    
+    <!-- <div class="d-flex w-100">
+        
+        <app-task-presentation>presentation works one</app-task-presentation>
+        <app-task-presentation>presentation works two</app-task-presentation> -->
+    <!-- </div> -->
 </div>

@@ -1,5 +1,5 @@
-<main class="main-wrapper">
-    <div class="px-4">
+<main class="main-wrapper d-flex flex-column h-100">
+    <div class="project-view-style px-4">
         <div class="row py-5 mx-0">
             <div class="col-6 p-0">
                 <h4>August Envato Product</h4>
@@ -14,22 +14,24 @@
                 </div>
             </div>
         </div>
-        <div class="row py-2 mx-0 border-bottom">
+        <div class="project-tab row mx-0">
             <div class="col-6 p-0">
-                <span class="me-3">Discussion</span>
-                <span class="me-3">Tasks</span>
-                <span class="me-3">Timeline</span>
-                <span class="me-3">Files</span>
-                <span class="me-3">Overview</span>
+                <div class="d-flex">
+                    <span class="project-tab-menu py-2 me-3">Discussion</span>
+                    <span class="project-tab-menu py-2 me-3">Tasks</span>
+                    <span class="project-tab-menu py-2 me-3">Timeline</span>
+                    <span class="project-tab-menu py-2 me-3">Files</span>
+                    <span class="project-tab-menu py-2 me-3">Overview</span>
+                </div>
             </div>
             <div class="col-6 p-0">
                 <div class="d-flex justify-content-end">
-                    <span>Last Update: August 26,2022</span>
+                    <span class="py-2">Last Update: August 26,2022</span>
                 </div>
             </div>
         </div>
     </div>
-    <div>
+    <div class="flex-grow-1">
         <router-outlet></router-outlet>
     </div>
 </main>
