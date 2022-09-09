@@ -6,6 +6,7 @@ import { ProjectViewPresentationComponent } from './projects-container/project-v
 import { ProjectsRoutingModule } from './projects-routing.module';
 import { TaskManagementPresentationComponent } from './projects-container/task-management-presentation/task-management-presentation.component';
 import { TaskPresentationComponent } from './projects-container/task-management-presentation/task-presentation/task-presentation.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 
 
@@ -19,7 +20,8 @@ import { TaskPresentationComponent } from './projects-container/task-management-
   ],
   imports: [
     CommonModule,
-    ProjectsRoutingModule
+    ProjectsRoutingModule,
+    DragDropModule
   ],
   exports: [
     ProjectsContainerComponent

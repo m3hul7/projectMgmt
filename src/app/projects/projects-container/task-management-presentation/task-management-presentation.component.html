@@ -27,23 +27,67 @@
             </div>
         </div>
     </div>
-    <div class="d-flex flex-grow-1">
+    <div class="d-flex flex-grow-1" cdkDropListGroup>
         <div class="col-5 flex-grow-1">
-            <app-task-presentation>New Tasks</app-task-presentation>
+            <div class="task-title p-4 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center">
+                    <span class="icon-dot-circle-o"></span>
+                    <h5 class="m-0 ps-3">New Task</h5>
+                </div>
+                <span class="icon-plus"></span>
+            </div>
+            <div class="px-4">
+                <div
+                    cdkDropList
+                    class="example-list"
+                    [cdkDropListConnectedTo]="['todo','done','complete']"
+                    (cdkDropListDropped)="drop($event)">
+                    <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+                </div>
+            </div>
         </div>
         
         <div class="col-5 flex-grow-1">
-            <app-task-presentation>New Tasks</app-task-presentation>
+            <div class="col-5 flex-grow-1">
+                <div class="task-title p-4 d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
+                        <span class="icon-dot-circle-o"></span>
+                        <h5 class="m-0 ps-3">On going</h5>
+                    </div>
+                    <span class="icon-plus"></span>
+                </div>
+                <div class="px-4">
+                    <div
+                  cdkDropList
+                  class="example-list"
+                  [cdkDropListConnectedTo]="['todo','done','complete']"
+                  (cdkDropListDropped)="drop($event)">
+                  <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+                </div>
+                </div>
+            </div>
         </div>
         
         <div class="col-5 flex-grow-1">
-            <app-task-presentation>New Tasks</app-task-presentation>
+            <div class="col-5 flex-grow-1">
+                <div class="task-title p-4 d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
+                        <span class="icon-dot-circle-o"></span>
+                        <h5 class="m-0 ps-3">Completed</h5>
+                    </div>
+                    <span class="icon-plus"></span>
+                </div>
+                <div class="px-4">
+                    <div
+                  cdkDropList
+                  class="example-list"
+                  [cdkDropListConnectedTo]="['todo','done','complete']"
+                  (cdkDropListDropped)="drop($event)">
+                  <div class="example-box" *ngFor="let item of complete" cdkDrag>{{item}}</div>
+                </div>
+                </div>
+            </div>
         </div>
     </div>
     
-    <!-- <div class="d-flex w-100">
-        
-        <app-task-presentation>presentation works one</app-task-presentation>
-        <app-task-presentation>presentation works two</app-task-presentation> -->
-    <!-- </div> -->
 </div>
