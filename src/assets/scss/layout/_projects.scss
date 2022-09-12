@@ -2,13 +2,13 @@
 .project-list {
     width: $project-list-width;
     flex: 0 0 $project-list-width;
-    border-right: .25rem solid $secondary;
+    border-right: $border-width solid $border-color;
 }
 
 // task management stylesheet
 .tasks-style {
     .filter-view {
-        border-bottom: .25rem solid $secondary;
+        border-bottom: $border-width solid $border-color;
         &-menu {
             cursor: pointer;
             border-radius: .75rem;
@@ -24,14 +24,14 @@
 // project view stylesheet
 .project-view-style {
     .project-tab {
-        border-bottom: 2px solid $secondary;
+        border-bottom: $border-width solid $border-color;
         &-menu {
             cursor:pointer;
-            border-bottom: 2px solid transparent;
+            border-bottom: $border-width solid transparent;
         }
         &-menu:hover {
-            transition: .4s all;
-            border-bottom: 2px solid $light;
+            transition: $transition-time all;
+            border-bottom: $border-width solid $border-color-hover;
         }
     }
 }

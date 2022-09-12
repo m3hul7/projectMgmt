@@ -11,10 +11,19 @@ $project-list-width: 300px;
 $project-search-width: 250px;
 $project-search-height: 50px;
 
+// border 
+$border-color: $secondary;
+$border-width: .25rem;
+$border-color-hover:  $light;
+
+// card
+$card-width: 300px;
+$card-radius: .75rem;
+
 // // All the SCSS Variables goes here
 // $font-family-base: "Roboto", sans-serif;
 $transition-time: 0.4s;
-// $font-size-base-sm: 0.875rem;
+$font-size-base-sm: 0.875rem;
 // ////// Bootstrap
 // //aside
 // $aside-width: 300px;

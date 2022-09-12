@@ -14,13 +14,15 @@ export class TaskManagementPresentationComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  todo = ['Get to work', 'Pick up groceries', 'Go home', 'Fall asleep'];
+  newtask = ['Get to work', 'Pick up groceries', 'Go home', 'Fall asleep'];
 
-  done = ['Get up', 'Brush teeth', 'Take a shower', 'Check e-mail', 'Walk dog'];
+  progress = ['Get up', 'Brush teeth', 'Take a shower', 'Check e-mail', 'Walk dog'];
+
+  review = ['Sit', 'teeth', 'shower', 'e-mail', 'dog'];
 
   complete = ['Sit', 'teeth', 'shower', 'e-mail', 'dog'];
 
-  drop(event: CdkDragDrop<String[]>) {
+  drop(event: CdkDragDrop<String[]>| any) {
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {
