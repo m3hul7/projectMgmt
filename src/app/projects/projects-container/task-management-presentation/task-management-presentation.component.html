@@ -27,10 +27,10 @@
             </div>
         </div>
     </div>
-    <div class="d-flex flex-grow-1 overflow-auto" cdkDropListGroup>
+    <div class="d-flex flex-grow-1 overflow-x-auto h-100" cdkDropListGroup>
 
         <!-- New Task column -->
-        <div class="card-column flex-grow-1">
+        <div class="col-3 card-column overflow-hidden d-flex flex-column">
             <div class="card-title p-4 d-flex align-items-center justify-content-between">
                 <div class="d-flex align-items-center">
                     <span class="icon-dot-circle-o"></span>
@@ -38,48 +38,61 @@
                 </div>
                 <span class="icon-plus"></span>
             </div>
-            <div class="px-4">
-                <div
+            <div class="py-4 overflow-hidden">
+                <div class="px-4 overflow-auto h-100">
+                    <div
                     cdkDropList
                     [cdkDropListData]="newtask"
-                    class="example-list"
                     (cdkDropListDropped)="drop($event)">
-                    <div class="example-box" *ngFor="let item of newtask" cdkDrag>{{item}}</div>
+                    <div class="card" *ngFor="let item of newtask" cdkDrag>
+                        <div class="card-body">
+                            <img class="card-img-top" src="..." alt="Card image cap">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span class="card-small-text bg-secondary p-1">{{item.tag}}</span>
+                                <span class="icon-more-horizontal"></span>
+                            </div>
+                            <h6>{{item.title}}</h6>
+                            <p class="card-text card-small-text">{{item.description}}</p>
+                        </div>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
         
         <!-- On Progress column -->
-        <div class="card-column flex-grow-1 overflow-hidden">
-            <div class="card-title p-4 d-flex align-items-center justify-content-between">
+        <div class="col-3 card-column overflow-hidden d-flex flex-column">
+            <div class="card-title p-4 mb-4 d-flex align-items-center justify-content-between">
                 <div class="d-flex align-items-center">
                     <span class="icon-dot-circle-o"></span>
                     <h5 class="m-0 ps-3">On Progress (8)</h5>
                 </div>
                 <span class="icon-plus"></span>
             </div>
-            <div class="px-4 py-3 overflow-auto">
-                <div
-                cdkDropList
-                [cdkDropListData]="progress"
-                (cdkDropListDropped)="drop($event)">
-                <div class="card" *ngFor="let item of progress" cdkDrag>
-                    <div class="card-body">
-                        <img class="card-img-top" src="..." alt="Card image cap">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <span class="card-small-text bg-secondary p-1">Web App Design</span>
-                            <span class="icon-more-horizontal"></span>
+            <div class="py-4 overflow-hidden">
+                <div class="px-4 overflow-auto h-100">
+                    <div
+                    cdkDropList
+                    [cdkDropListData]="progress"
+                    (cdkDropListDropped)="drop($event)">
+                    <div class="card" *ngFor="let item of progress" cdkDrag>
+                        <div class="card-body">
+                            <img class="card-img-top" src="..." alt="Card image cap">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span class="card-small-text bg-secondary p-1">{{item.tag}}</span>
+                                <span class="icon-more-horizontal"></span>
+                            </div>
+                            <h6>{{item.title}}</h6>
+                            <p class="card-text card-small-text">{{item.description}}</p>
                         </div>
-                        <h6>Make a Friend UI Kit</h6>
-                        <p class="card-text card-small-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
-                </div>
+                    </div>
                 </div>
             </div>
         </div>
         
         <!-- On Review column -->
-        <div class="card-column flex-grow-1">
+        <div class="col-3 card-column overflow-hidden d-flex flex-column">
             <div class="card-title p-4 d-flex align-items-center justify-content-between">
                 <div class="d-flex align-items-center">
                     <span class="icon-dot-circle-o"></span>
@@ -87,19 +100,30 @@
                 </div>
                 <span class="icon-plus"></span>
             </div>
-            <div class="px-4">
-                <div
-                cdkDropList
-                [cdkDropListData]="review"
-                class="example-list"
-                (cdkDropListDropped)="drop($event)">
-                <div class="example-box" *ngFor="let item of review" cdkDrag>{{item}}</div>
+            <div class="py-4 overflow-hidden">
+                <div class="px-4 overflow-y-auto h-100">
+                    <div
+                    cdkDropList
+                    [cdkDropListData]="review"
+                    (cdkDropListDropped)="drop($event)">
+                    <div class="card" *ngFor="let item of review" cdkDrag>
+                        <div class="card-body">
+                            <img class="card-img-top" src="..." alt="Card image cap">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span class="card-small-text bg-secondary p-1">{{item.tag}}</span>
+                                <span class="icon-more-horizontal"></span>
+                            </div>
+                            <h6>{{item.title}}</h6>
+                            <p class="card-text card-small-text">{{item.description}}</p>
+                        </div>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
 
         <!-- Complete  column -->
-        <div class="card-column flex-grow-1">
+        <div class="col-3 card-column overflow-hidden d-flex flex-column">
             <div class="card-title p-4 d-flex align-items-center justify-content-between">
                 <div class="d-flex align-items-center">
                     <span class="icon-dot-circle-o"></span>
@@ -107,13 +131,24 @@
                 </div>
                 <span class="icon-plus"></span>
             </div>
-            <div class="px-4">
-                <div
-                cdkDropList
-                [cdkDropListData]="complete"
-                class="example-list"
-                (cdkDropListDropped)="drop($event)">
-                <div class="example-box" *ngFor="let item of complete" cdkDrag>{{item}}</div>
+            <div class="py-4 overflow-hidden">
+                <div class="px-4 overflow-y-auto h-100">
+                    <div
+                    cdkDropList
+                    [cdkDropListData]="review"
+                    (cdkDropListDropped)="drop($event)">
+                    <div class="card" *ngFor="let item of complete" cdkDrag>
+                        <div class="card-body">
+                            <img class="card-img-top" src="..." alt="Card image cap">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span class="card-small-text bg-secondary p-1">{{item.tag}}</span>
+                                <span class="icon-more-horizontal"></span>
+                            </div>
+                            <h6>{{item.title}}</h6>
+                            <p class="card-text card-small-text">{{item.description}}</p>
+                        </div>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>

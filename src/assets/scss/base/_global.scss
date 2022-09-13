@@ -43,19 +43,19 @@ body {
     overflow-y: hidden;
 }
 
-// .overflow-x-auto {
-//     overflow-x: auto;
-//     overflow-y: hidden;
-//     scrollbar-color: $secondary transparent;
-//     scrollbar-width: thin;
-// }
+.overflow-x-auto {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-color: $light transparent;
+    scrollbar-width: thin;
+}
 
-// .overflow-y-auto {
-//     overflow-y: auto;
-//     overflow-x: hidden;
-//     scrollbar-color: $secondary transparent;
-//     scrollbar-width: thin;
-// }
+.overflow-y-auto {
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-color: $secondary transparent;
+    scrollbar-width: thin;
+}
 
 // .overflow-auto {
 //     scrollbar-color: $secondary transparent;

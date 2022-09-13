@@ -14,13 +14,77 @@ export class TaskManagementPresentationComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  newtask = ['Get to work', 'Pick up groceries', 'Go home', 'Fall asleep'];
+  newtask = [
+    {
+      tag: "web app Design",
+      title: "hello my new friend 1",
+      description: "something here osome quick example text to build on on the card title and make up the bulk of the card's"
+    },
+    {
+      tag: "web app Design",
+      title: "hello my new friend 2",
+      description: "something here osome quick example text to build on on the card title and make up the bulk of the card's"
+    },
+    {
+      tag: "web app Design",
+      title: "hello my new friend 3",
+      description: "something here osome quick example text to build on on the card title and make up the bulk of the card's"
+    }
+  ];
 
-  progress = ['Get up', 'Brush teeth', 'Take a shower', 'Check e-mail', 'Walk dog'];
+  progress = [
+    {
+      tag: "web app Design 1",
+      title: "hello my on progress friend 1",
+      description: "something here osome quick example text to build on on the card title and make up the bulk of the card's"
+    },
+    {
+      tag: "web app Design 2",
+      title: "hello my on progress friend 2",
+      description: "something here osome quick example text to build on on the card title and make up the bulk of the card's"
+    },
+    {
+      tag: "web app Design 2",
+      title: "hello my on progress friend 2",
+      description: "something here osome quick example text to build on on the card title and make up the bulk of the card's"
+    }
+  ]
 
-  review = ['Sit', 'teeth', 'shower', 'e-mail', 'dog'];
+  review = [
+    {
+      tag: "web app Design",
+      title: "hello my on review friend 1",
+      description: "something here osome quick example text to build on on the card title and make up the bulk of the card's"
+    },
+    {
+      tag: "web app Design",
+      title: "hello my on review friend 2",
+      description: "something here osome quick example text to build on on the card title and make up the bulk of the card's"
+    },
+    {
+      tag: "web app Design",
+      title: "hello my on review friend 2",
+      description: "something here osome quick example text to build on on the card title and make up the bulk of the card's"
+    }
+  ];
 
-  complete = ['Sit', 'teeth', 'shower', 'e-mail', 'dog'];
+  complete = [
+    {
+      tag: "web app Design",
+      title: "hello my finished friend 1",
+      description: "something here osome quick example text to build on on the card title and make up the bulk of the card's"
+    },
+    {
+      tag: "web app Design",
+      title: "hello my finished friend 2",
+      description: "something here osome quick example text to build on on the card title and make up the bulk of the card's"
+    },
+    {
+      tag: "web app Design",
+      title: "hello my finished friend 2",
+      description: "something here osome quick example text to build on on the card title and make up the bulk of the card's"
+    }
+  ];
 
   drop(event: CdkDragDrop<String[]>| any) {
     if (event.previousContainer === event.container) {
