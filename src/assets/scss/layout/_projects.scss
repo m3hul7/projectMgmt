@@ -1,37 +1,33 @@
 // projects stylesheet
-.project-list {
+.aside-wrapper {
     width: $project-list-width;
     flex: 0 0 $project-list-width;
     border-right: $border-width solid $border-color;
 }
 
-// task management stylesheet
-.tasks-style {
-    .filter-view {
+// project view stylesheet
+.project-view {
+    &-tab {
         border-bottom: $border-width solid $border-color;
-        &-menu {
-            cursor: pointer;
-            border-radius: .75rem;
+        .tab-menu {
+            padding-bottom: 11px;
+        }
+        .active .tab-menu {
+            border-bottom: $border-width solid $danger;
+        }
+        .tab-menu:hover {
+            border-bottom: $border-width solid $danger;
         }
     }
 }
 
-// task stylesheet
-// .tasks-title {
-//     // border-bottom: ;
-// }
-
-// project view stylesheet
-.project-view-style {
-    .project-tab {
+// task management stylesheet
+.tasks {
+    &-refinement {
         border-bottom: $border-width solid $border-color;
-        &-menu {
-            cursor:pointer;
-            border-bottom: $border-width solid transparent;
-        }
-        &-menu:hover {
-            transition: $transition-time all;
-            border-bottom: $border-width solid $border-color-hover;
-        }
+    }
+    &-menu {
+        cursor: pointer;
+        border-radius: .75rem;
     }
 }

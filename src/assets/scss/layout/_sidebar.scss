@@ -8,6 +8,9 @@
 }
 
 .nav {
+    .active {
+        color: $danger;
+    }
     &-link:hover {
         color: $danger;
     }
