@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OverlayNewProjectService } from 'src/app/shared/services/overlay-new-project.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private overlayService: OverlayNewProjectService) { }
 
   ngOnInit(): void {
   }
 
+  openOverlay(){
+    this.overlayService.displayOverlay()
+  }
 }

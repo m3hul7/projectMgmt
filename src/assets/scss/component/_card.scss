@@ -1,6 +1,7 @@
 // card styles goes here
 
 .card-column {
+    border-top: $border-width solid $border-color;
     border-right: $border-width solid $border-color;
     flex: 1 0 $card-width;
     .card-title {
@@ -12,6 +13,9 @@
         &-small-text{
             font-size: $font-size-base-sm;
         }
+    }
+    .card:hover {
+        background-color: rgba($color: $primary, $alpha: 5.0);
     }
 }
 

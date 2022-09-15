@@ -44,7 +44,7 @@
                     cdkDropList
                     [cdkDropListData]="newtask"
                     (cdkDropListDropped)="drop($event)">
-                    <div class="card" *ngFor="let item of newtask" cdkDrag>
+                    <div class="card mb-3" *ngFor="let item of newtask" cdkDrag>
                         <div class="card-body">
                             <img class="card-img-top" src="..." alt="Card image cap">
                             <div class="d-flex align-items-center justify-content-between">
@@ -62,7 +62,7 @@
         
         <!-- On Progress column -->
         <div class="col-3 card-column overflow-hidden d-flex flex-column">
-            <div class="card-title p-4 mb-4 d-flex align-items-center justify-content-between">
+            <div class="card-title p-4 d-flex align-items-center justify-content-between">
                 <div class="d-flex align-items-center">
                     <span class="icon-dot-circle-o"></span>
                     <h5 class="m-0 ps-3">On Progress (8)</h5>
@@ -75,7 +75,7 @@
                     cdkDropList
                     [cdkDropListData]="progress"
                     (cdkDropListDropped)="drop($event)">
-                    <div class="card" *ngFor="let item of progress" cdkDrag>
+                    <div class="card mb-3" *ngFor="let item of progress" cdkDrag>
                         <div class="card-body">
                             <img class="card-img-top" src="..." alt="Card image cap">
                             <div class="d-flex align-items-center justify-content-between">
@@ -106,7 +106,7 @@
                     cdkDropList
                     [cdkDropListData]="review"
                     (cdkDropListDropped)="drop($event)">
-                    <div class="card" *ngFor="let item of review" cdkDrag>
+                    <div class="card mb-3" *ngFor="let item of review" cdkDrag>
                         <div class="card-body">
                             <img class="card-img-top" src="..." alt="Card image cap">
                             <div class="d-flex align-items-center justify-content-between">
@@ -137,7 +137,7 @@
                     cdkDropList
                     [cdkDropListData]="review"
                     (cdkDropListDropped)="drop($event)">
-                    <div class="card" *ngFor="let item of complete" cdkDrag>
+                    <div class="card mb-3" *ngFor="let item of complete" cdkDrag>
                         <div class="card-body">
                             <img class="card-img-top" src="..." alt="Card image cap">
                             <div class="d-flex align-items-center justify-content-between">

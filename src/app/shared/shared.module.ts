@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { OverlayNewProjectComponent } from './overlay-new-project/overlay-new-project.component';
+import { OverlayModule } from '@angular/cdk/overlay';
 
 
 
@@ -9,7 +10,8 @@ import { OverlayNewProjectComponent } from './overlay-new-project/overlay-new-pr
     OverlayNewProjectComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    OverlayModule
   ]
 })
 export class SharedModule { }
