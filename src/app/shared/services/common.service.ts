@@ -16,8 +16,7 @@ export class CommonService {
   }
 
   public createNewProject(newProject: NewProject): Observable<NewProject> {
-    // debugger
-    console.log(newProject)
+    console.log("service cs",  newProject)
     return this._http.post<NewProject>(`${this._apiLink}/projects/`, newProject)
   }
 }

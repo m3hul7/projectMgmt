@@ -44,11 +44,11 @@
                     cdkDropList
                     [cdkDropListData]="newtask"
                     (cdkDropListDropped)="drop($event)">
-                    <div class="card mb-3" *ngFor="let item of newtask" cdkDrag>
+                    <div class="card mb-3 bg-secondary" *ngFor="let item of newtask" cdkDrag>
                         <div class="card-body">
                             <img class="card-img-top" src="..." alt="Card image cap">
                             <div class="d-flex align-items-center justify-content-between">
-                                <span class="card-small-text bg-secondary p-1">{{item.tag}}</span>
+                                <span class="card-small-text p-1">{{item.tag}}</span>
                                 <span class="icon-more-horizontal"></span>
                             </div>
                             <h6>{{item.title}}</h6>
@@ -75,11 +75,11 @@
                     cdkDropList
                     [cdkDropListData]="progress"
                     (cdkDropListDropped)="drop($event)">
-                    <div class="card mb-3" *ngFor="let item of progress" cdkDrag>
+                    <div class="card mb-3 bg-secondary" *ngFor="let item of progress" cdkDrag>
                         <div class="card-body">
                             <img class="card-img-top" src="..." alt="Card image cap">
                             <div class="d-flex align-items-center justify-content-between">
-                                <span class="card-small-text bg-secondary p-1">{{item.tag}}</span>
+                                <span class="card-small-text p-1">{{item.tag}}</span>
                                 <span class="icon-more-horizontal"></span>
                             </div>
                             <h6>{{item.title}}</h6>
@@ -96,7 +96,7 @@
             <div class="card-title p-4 d-flex align-items-center justify-content-between">
                 <div class="d-flex align-items-center">
                     <span class="icon-dot-circle-o"></span>
-                    <h5 class="m-0 ps-3">On Review(3)</h5>
+                    <h5 class="m-0 ps-3 bg-secondary">On Review(3)</h5>
                 </div>
                 <span class="icon-plus"></span>
             </div>
@@ -106,11 +106,11 @@
                     cdkDropList
                     [cdkDropListData]="review"
                     (cdkDropListDropped)="drop($event)">
-                    <div class="card mb-3" *ngFor="let item of review" cdkDrag>
+                    <div class="card mb-3 bg-secondary" *ngFor="let item of review" cdkDrag>
                         <div class="card-body">
                             <img class="card-img-top" src="..." alt="Card image cap">
                             <div class="d-flex align-items-center justify-content-between">
-                                <span class="card-small-text bg-secondary p-1">{{item.tag}}</span>
+                                <span class="card-small-text p-1">{{item.tag}}</span>
                                 <span class="icon-more-horizontal"></span>
                             </div>
                             <h6>{{item.title}}</h6>
@@ -127,7 +127,7 @@
             <div class="card-title p-4 d-flex align-items-center justify-content-between">
                 <div class="d-flex align-items-center">
                     <span class="icon-dot-circle-o"></span>
-                    <h5 class="m-0 ps-3">Completed (3)</h5>
+                    <h5 class="m-0 ps-3 bg-secondary">Completed (3)</h5>
                 </div>
                 <span class="icon-plus"></span>
             </div>
@@ -135,13 +135,13 @@
                 <div class="px-4 overflow-y-auto h-100">
                     <div
                     cdkDropList
-                    [cdkDropListData]="review"
+                    [cdkDropListData]="complete"
                     (cdkDropListDropped)="drop($event)">
-                    <div class="card mb-3" *ngFor="let item of complete" cdkDrag>
+                    <div class="card mb-3 bg-secondary" *ngFor="let item of complete" cdkDrag>
                         <div class="card-body">
                             <img class="card-img-top" src="..." alt="Card image cap">
                             <div class="d-flex align-items-center justify-content-between">
-                                <span class="card-small-text bg-secondary p-1">{{item.tag}}</span>
+                                <span class="card-small-text p-1">{{item.tag}}</span>
                                 <span class="icon-more-horizontal"></span>
                             </div>
                             <h6>{{item.title}}</h6>

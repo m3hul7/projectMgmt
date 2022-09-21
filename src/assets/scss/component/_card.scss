@@ -8,15 +8,27 @@
         border-bottom: $border-width solid $border-color;
     }
     .card {
-        background-color: $secondary;
         border-radius: $card-radius;
-        &-small-text{
-            font-size: $font-size-base-sm;
-        }
+        // review
+        // &-small-text{
+        //     font-size: $font-size-base-sm;
+        // }
     }
-    .card:hover {
-        background-color: rgba($color: $primary, $alpha: 5.0);
+    // review
+    // .card:hover {
+    //     background-color: rgba($color: $primary, $alpha: 5.0);
+    // }
+    /* Animate items as they're being sorted. */
+    .cdk-drop-list-dragging .cdk-drag {
+        transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
     }
+  
+    /* Animate an item that has been dropped. */
+    .cdk-drag-animating {
+        transition: transform 300ms cubic-bezier(0, 0, 0.2, 1);
+    }
+
+    
 }
 
 // .card-certificate {

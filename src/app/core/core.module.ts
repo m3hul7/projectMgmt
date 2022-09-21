@@ -4,9 +4,7 @@ import { MasterComponent } from './master/master.component';
 import { RouterModule } from '@angular/router';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
-import { SidebarPresentationComponent } from './master/sidebar-presentation/sidebar-presentation.component';
-import { OverlayNewprojectPresentationComponent } from './master/overlay-newproject-presentation/overlay-newproject-presentation.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SidebarComponent } from './master/sidebar/sidebar.component';
 
 
 @NgModule({
@@ -14,14 +12,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MasterComponent,
     SignInComponent,
     SignUpComponent,
-    SidebarPresentationComponent,
-    OverlayNewprojectPresentationComponent
+    SidebarComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
-    FormsModule,
-    ReactiveFormsModule,
   ]
 })
 export class CoreModule { }

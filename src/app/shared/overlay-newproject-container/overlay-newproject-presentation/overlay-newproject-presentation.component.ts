@@ -14,21 +14,24 @@ export class OverlayNewprojectPresentationComponent implements OnInit {
   public projectCategory: String[] = ["Commercial", "Non-Profit", "Educational"];
   public projectManager: String[] = ["Mehul Patel", "Tanmay Patel"];
 
-  @Output() emitCloseForm: EventEmitter<boolean>
+  @Output() emitCloseForm: EventEmitter<any>
   @Output() emitFormData: EventEmitter<NewProject>
 
   constructor(private _onps: OverlayNewprojectPresenterService) {
     this.emitCloseForm = new EventEmitter();
     this.emitFormData = new EventEmitter();
+    this.projectForm = this._onps.newProjectForm();
    }
 
   ngOnInit(): void {
-    this.projectForm = this._onps.newProjectForm()
+    this._onps.overlayNewProjectData$.subscribe((res) => {
+      this.emitFormData.emit(res);
+    })
   }
 
   onSubmit() {
-    console.log(this.projectForm.value)
-    this.emitFormData.emit(this.projectForm.value)
+    this._onps.newProjectFormData(this.projectForm);
+    this.emitCloseForm.emit();
   }
 
   resetForm() {
@@ -36,6 +39,6 @@ export class OverlayNewprojectPresentationComponent implements OnInit {
   }
 
   emitCancel() {
-    this.emitCloseForm.emit(true);
+    this.emitCloseForm.emit();
   }
 }

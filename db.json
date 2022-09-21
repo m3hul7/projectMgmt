@@ -1,6 +1,16 @@
 {
   "projects": [
-    
+    {
+      "projectName": "StrataScratch - The Place To Master Coding",
+      "projectDescription": "[webpack-dev-server] Server started: Hot Module Replacement disabled, Live Reloading enabled, Progress disabled, Overlay enabled.",
+      "projectManager": "Mehul Patel",
+      "projectStartDate": "2022-09-21",
+      "projectEstimatedEndDate": "2022-09-22",
+      "category": "Non-Profit",
+      "billingType": "Fix",
+      "projectStatus": "New",
+      "id": 1
+    }
   ],
   "comments": [
     {
