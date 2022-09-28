@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
+import { ProjectsService } from 'src/app/projects/services/projects.service';
 
 @Component({
   selector: 'app-task-management-presentation',
@@ -9,7 +10,7 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
 })
 export class TaskManagementPresentationComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _ps:ProjectsService) { }
 
   ngOnInit(): void {
   }

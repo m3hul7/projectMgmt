@@ -1,0 +1,68 @@
+<div class="overview d-flex h-100">
+  <ng-container *ngIf="specificProject">
+    <div class="col-8 p-4">
+      <h2 class="pb-4">Project Info</h2>
+      <div>
+        <h6 class="py-3">{{ specificProject.projectName }}</h6>
+        <p>{{ specificProject.projectDescription }}</p>
+      </div>
+      <div class="flex-grow-1">
+        <h6>Work Progress</h6>
+        <div class="d-flex">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-4 d-flex flex-column p-4">
+      <h6>Responsible</h6>
+      <div class="d-flex justify-content-between align-items-center bg-secondary p-3">
+        <div class="d-flex flex-column">
+          <h6>{{ specificProject.projectManager }}</h6>
+          <span>Project Manager</span>
+        </div>
+        <div>
+          <span class="icon-more-horizontal"></span>
+        </div>
+      </div>
+      <div class="row py-4">
+        <div class="col-6 d-flex flex-column">
+          <span>Start Date</span>
+          <span>Estinated End Date</span>
+          <span>Category</span>
+          <span>Billing Type</span>
+          <span>Project Status</span>
+        </div>
+        <div class="col-6 d-flex flex-column align-items-end">
+          <span>{{ specificProject.projectStartDate }}</span>
+          <span>{{ specificProject.projectEstimatedEndDate }}</span>
+          <span>{{ specificProject.category }}</span>
+          <span>{{ specificProject.billingType }} Price</span>
+          <span>{{ specificProject.projectStatus }}</span>
+        </div>
+      </div>
+      <div>
+        <div class="d-flex justify-content-between p-4 mb-2 bg-secondary">
+          <span>Project progress</span>
+          <span>19%</span>
+        </div>
+        <div class="d-flex justify-content-between p-4 mb-2 bg-secondary">
+          <span>New Tasks</span>
+          <span>32</span>
+        </div>
+        <div class="d-flex justify-content-between p-4 mb-2 bg-secondary">
+          <span>On Progress Tasks</span>
+          <span>6</span>
+        </div>
+        <div class="d-flex justify-content-between p-4 mb-2 bg-secondary">
+          <span>On Review Tasks</span>
+          <span>2</span>
+        </div>
+        <div class="d-flex justify-content-between p-4 mb-2 bg-secondary">
+          <span>Completed Tasks</span>
+          <span>24</span>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

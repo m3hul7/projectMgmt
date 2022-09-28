@@ -1,8 +1,8 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { OverviewPresentationComponent } from "./projects-container/project-view-presentation/overview-presentation/overview-presentation.component";
-import { ProjectsContainerComponent } from "./projects-container/projects-container.component";
-import { TaskManagementPresentationComponent } from "./projects-container/project-view-presentation/task-management-presentation/task-management-presentation.component";
+import { OverviewContainerComponent } from "./overview-container/overview-container.component";
+import { ProjectsComponent } from "./projects.component";
+import { TaskManagementContainerComponent } from "./task-management-container/task-management-container.component";
 
 const routes: Routes = [
     {
@@ -12,7 +12,7 @@ const routes: Routes = [
     },
     {
         path: 'project',
-        component: ProjectsContainerComponent,
+        component: ProjectsComponent,
         children :  [
             {
                 path: '',
@@ -21,11 +21,11 @@ const routes: Routes = [
             },
             {
                 path: 'tasks',
-                component: TaskManagementPresentationComponent
+                component: TaskManagementContainerComponent
             },
             {
                 path:'overview',
-                component: OverviewPresentationComponent
+                component: OverviewContainerComponent
             }
         ]
     }

@@ -1,22 +1,33 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProjectsContainerComponent } from './projects-container/projects-container.component';
-import { ProjectListPresentationComponent } from './projects-container/project-list-presentation/project-list-presentation.component';
-import { ProjectViewPresentationComponent } from './projects-container/project-view-presentation/project-view-presentation.component';
 import { ProjectsRoutingModule } from './projects-routing.module';
-import { TaskManagementPresentationComponent } from './projects-container/project-view-presentation/task-management-presentation/task-management-presentation.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
-import { OverviewPresentationComponent } from './projects-container/project-view-presentation/overview-presentation/overview-presentation.component';
+
+import { ProjectsComponent } from './projects.component';
+import { ProjectListContainerComponent } from './project-list-container/project-list-container.component';
+import { ProjectListPresentationComponent } from './project-list-container/project-list-presentation/project-list-presentation.component';
+import { ProjectViewContainerComponent } from './project-view-container/project-view-container.component';
+import { ProjectViewPresentationComponent } from './project-view-container/project-view-presentation/project-view-presentation.component';
+import { OverviewPresentationComponent } from './overview-container/overview-presentation/overview-presentation.component';
+import { TaskManagementPresentationComponent } from './task-management-container/task-management-presentation/task-management-presentation.component';
+import { OverviewContainerComponent } from './overview-container/overview-container.component';
+import { TaskManagementContainerComponent } from './task-management-container/task-management-container.component';
+
+
 
 
 
 @NgModule({
   declarations: [
-    ProjectsContainerComponent,
+    ProjectsComponent,
+    ProjectListContainerComponent,
     ProjectListPresentationComponent,
+    ProjectViewContainerComponent,
     ProjectViewPresentationComponent,
-    TaskManagementPresentationComponent,
     OverviewPresentationComponent,
+    TaskManagementPresentationComponent,
+    OverviewContainerComponent,
+    TaskManagementContainerComponent
   ],
   imports: [
     CommonModule,
@@ -24,7 +35,6 @@ import { OverviewPresentationComponent } from './projects-container/project-view
     DragDropModule
   ],
   exports: [
-    ProjectsContainerComponent
   ]
 })
 export class ProjectsModule { }

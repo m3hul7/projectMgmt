@@ -1,6 +1,17 @@
 {
   "projects": [
     {
+      "projectName": "August Envato Product",
+      "projectDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit non unde, quia minima delectus culpa laudantium vel corrupti dolor tenetur qui, quibusdam ipsam sed totam enim nam, optio quis cupiditate?",
+      "projectManager": "Mehul Patel",
+      "projectStartDate": "2021-05-12",
+      "projectEstimatedEndDate": "2022-09-10",
+      "category": "Corporate Website",
+      "billingType": "Fix",
+      "projectStatus": "According to plan",
+      "id": 1
+    },
+    {
       "projectName": "StrataScratch - The Place To Master Coding",
       "projectDescription": "[webpack-dev-server] Server started: Hot Module Replacement disabled, Live Reloading enabled, Progress disabled, Overlay enabled.",
       "projectManager": "Mehul Patel",
@@ -9,7 +20,29 @@
       "category": "Non-Profit",
       "billingType": "Fix",
       "projectStatus": "New",
-      "id": 1
+      "id": 2
+    },
+    {
+      "projectName": "StrataScratch - The Place To Master Coding",
+      "projectDescription": "[webpack-dev-server] Server started: Hot Module Replacement disabled, Live Reloading enabled, Progress disabled, Overlay enabled.",
+      "projectManager": "Mehul Patel",
+      "projectStartDate": "2022-09-21",
+      "projectEstimatedEndDate": "2022-09-22",
+      "category": "Non-Profit",
+      "billingType": "Fix",
+      "projectStatus": "New",
+      "id": 3
+    },
+    {
+      "projectName": "StrataScratch - The Place To Master Coding",
+      "projectDescription": "[webpack-dev-server] Server started: Hot Module Replacement disabled, Live Reloading enabled, Progress disabled, Overlay enabled.",
+      "projectManager": "Mehul Patel",
+      "projectStartDate": "2022-09-21",
+      "projectEstimatedEndDate": "2022-09-22",
+      "category": "Non-Profit",
+      "billingType": "Fix",
+      "projectStatus": "New",
+      "id": 4
     }
   ],
   "comments": [

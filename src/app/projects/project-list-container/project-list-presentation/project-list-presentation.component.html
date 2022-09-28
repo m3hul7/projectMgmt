@@ -31,11 +31,9 @@
             </label>
         </div>
         <div class="all-projects overflow-auto">
-            <p class="text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quidem eaque est numquam molestias doloremque deserunt dolorum omnis quisquam eum consequuntur qui quos, alias aliquid maxime sequi voluptate obcaecati deleniti?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quidem eaque est numquam molestias doloremque deserunt dolorum omnis quisquam eum consequuntur qui quos, alias aliquid maxime sequi voluptate obcaecati deleniti?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quidem eaque est numquam molestias doloremque deserunt dolorum omnis quisquam eum consequuntur qui quos, alias aliquid maxime sequi voluptate obcaecati deleniti?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quidem eaque est numquam molestias doloremque deserunt dolorum omnis quisquam eum consequuntur qui quos, alias aliquid maxime sequi voluptate obcaecati deleniti?</p> -->
+            <ng-container *ngFor="let iterator of allProjects">
+                <p class="text-truncate" (click)="sendId(iterator.id)">{{iterator.projectName}}</p>
+            </ng-container>
         </div>
     
         <input type="checkbox" id="archive-projects-checkbox" class="d-none" checked>
@@ -46,11 +44,11 @@
             </label>
         </div>
         <div class="archive-projects overflow-auto">
-            <p class="text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quidem eaque est numquam molestias doloremque deserunt dolorum omnis quisquam eum consequuntur qui quos, alias aliquid maxime sequi voluptate obcaecati deleniti?</p>
-            <p class="text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quidem eaque est numquam molestias doloremque deserunt dolorum omnis quisquam eum consequuntur qui quos, alias aliquid maxime sequi voluptate obcaecati deleniti?</p>
-            <p class="text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quidem eaque est numquam molestias doloremque deserunt dolorum omnis quisquam eum consequuntur qui quos, alias aliquid maxime sequi voluptate obcaecati deleniti?</p>
-            <p class="text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quidem eaque est numquam molestias doloremque deserunt dolorum omnis quisquam eum consequuntur qui quos, alias aliquid maxime sequi voluptate obcaecati deleniti?</p>
-            <p class="text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quidem eaque est numquam molestias doloremque deserunt dolorum omnis quisquam eum consequuntur qui quos, alias aliquid maxime sequi voluptate obcaecati deleniti?</p>
+            <ul>
+                <li >
+                    <a class="nav-link" href="#">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias dolor hic, quidem vitae ipsa iste ipsum libero nobis saepe reiciendis error, sit illum dicta ea minima nam, mollitia laudantium eum?</a>
+                </li>
+            </ul>
         </div>
     </div>
 </aside>

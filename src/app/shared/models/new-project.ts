@@ -1,4 +1,5 @@
 export class NewProject {
+    public id: number;
     public projectName: string;
     public projectDescription: string;
     public projectManager: string;
@@ -8,6 +9,7 @@ export class NewProject {
     public billingType: string;
     public projectStatus: string;
     constructor(
+        id:number,
         projectName: string,
         projectDescription: string,
         projectManager: string,
@@ -17,6 +19,7 @@ export class NewProject {
         billingType: string,
         projectStatus: string
     ){
+        this.id = id;
         this.projectName = projectName;
         this.projectDescription = projectDescription;
         this.projectManager = projectManager;
