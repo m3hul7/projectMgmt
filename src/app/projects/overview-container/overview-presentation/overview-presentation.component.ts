@@ -11,7 +11,6 @@ export class OverviewPresentationComponent implements OnInit {
 
   @Input() set specificProject(data: NewProject | null) {
     if(data) {
-      console.log(data, "from overview");
       this._projectDetails = data
     }
   }

@@ -1,18 +1,24 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { ProjectsRoutingModule } from './projects-routing.module';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { ProjectsRoutingModule } from './projects-routing.module';
 
-import { ProjectsComponent } from './projects.component';
+import { FilesContainerComponent } from './files-container/files-container.component';
+import { FilesPresentationComponent } from './files-container/files-presentation/files-presentation.component';
+import { OverviewContainerComponent } from './overview-container/overview-container.component';
+import { OverviewPresentationComponent } from './overview-container/overview-presentation/overview-presentation.component';
 import { ProjectListContainerComponent } from './project-list-container/project-list-container.component';
 import { ProjectListPresentationComponent } from './project-list-container/project-list-presentation/project-list-presentation.component';
 import { ProjectViewContainerComponent } from './project-view-container/project-view-container.component';
 import { ProjectViewPresentationComponent } from './project-view-container/project-view-presentation/project-view-presentation.component';
-import { OverviewPresentationComponent } from './overview-container/overview-presentation/overview-presentation.component';
-import { TaskManagementPresentationComponent } from './task-management-container/task-management-presentation/task-management-presentation.component';
-import { OverviewContainerComponent } from './overview-container/overview-container.component';
+import { ProjectsComponent } from './projects.component';
 import { TaskManagementContainerComponent } from './task-management-container/task-management-container.component';
-
+import { TaskManagementPresentationComponent } from './task-management-container/task-management-presentation/task-management-presentation.component';
+import { TimelineContainerComponent } from './timeline-container/timeline-container.component';
+import { TimelinePresentationComponent } from './timeline-container/timeline-presentation/timeline-presentation.component';
+import { SharedModule } from '../shared/shared.module';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -27,14 +33,17 @@ import { TaskManagementContainerComponent } from './task-management-container/ta
     OverviewPresentationComponent,
     TaskManagementPresentationComponent,
     OverviewContainerComponent,
-    TaskManagementContainerComponent
+    TaskManagementContainerComponent,
+    TimelineContainerComponent,
+    FilesContainerComponent,
+    TimelinePresentationComponent,
+    FilesPresentationComponent,
   ],
   imports: [
     CommonModule,
     ProjectsRoutingModule,
-    DragDropModule
-  ],
-  exports: [
+    DragDropModule,
+    SharedModule,
   ]
 })
 export class ProjectsModule { }

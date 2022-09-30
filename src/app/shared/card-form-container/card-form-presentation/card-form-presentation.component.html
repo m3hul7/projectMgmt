@@ -1,0 +1,26 @@
+<div class="card mb-3 bg-secondary">
+    <div class="card-body">
+        <form>
+            <div>
+                <label for="ctag">Card Tag</label>
+                <ng-multiselect-dropdown [placeholder]="'custom placeholder'" name="city"
+                    [settings]="dropdownSettings" [data]="dropdownList"
+                    [(ngModel)]="selectedItems" (onSelect)="onItemSelect($event)"
+                    (onSelectAll)="onSelectAll($event)">
+                </ng-multiselect-dropdown>
+            </div>
+            <div>
+                <label for="ctitle">Card Title</label>
+                <input type="text" id="ctitle" name="ctitle">
+            </div>
+            <div>
+                <label for="cdescription">Card Description</label>
+                <textarea name="cdescription" id="cdescription" cols="25"
+                    rows="5"></textarea>
+            </div>
+            <div>
+                <button>Add</button>
+            </div>
+        </form>
+    </div>
+</div>

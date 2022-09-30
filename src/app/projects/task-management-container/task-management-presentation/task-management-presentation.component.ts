@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
 import { ProjectsService } from 'src/app/projects/services/projects.service';
 
+
 @Component({
   selector: 'app-task-management-presentation',
   templateUrl: './task-management-presentation.component.html',
@@ -10,9 +11,17 @@ import { ProjectsService } from 'src/app/projects/services/projects.service';
 })
 export class TaskManagementPresentationComponent implements OnInit {
 
+  
+
+  public cardFormFlag: boolean = false;
+
   constructor(private _ps:ProjectsService) { }
 
   ngOnInit(): void {
+  }
+
+  createTask() {
+    this.cardFormFlag ? this.cardFormFlag = false : this.cardFormFlag = true ;
   }
 
   newtask = [
