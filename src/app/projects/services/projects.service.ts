@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { NewProject } from 'src/app/shared/models/new-project';
@@ -25,10 +25,15 @@ export class ProjectsService {
   }
 
   getAllPojects():Observable<NewProject[]> {
+    // const params = new HttpParams().set('delay',delay);
     return this._http.get<NewProject[]>(`${this._apiLink}/projects`);
   }
 
   getSpecificProject(id: number): Observable<NewProject> {
-    return this._http.get<NewProject>(`${this._apiLink}/projects/${id}`)
+    return this._http.get<NewProject>(`${this._apiLink}/projects/${id}`);
+  }
+
+  postUpdatedProject(id: number, updatedData:any): Observable<any> {
+    return this._http.patch<any>(`${this._apiLink}/projects/${id}`,updatedData)
   }
 }

@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
-import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
-import { ProjectsService } from 'src/app/projects/services/projects.service';
+import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
+
 
 
 @Component({
@@ -11,17 +11,32 @@ import { ProjectsService } from 'src/app/projects/services/projects.service';
 })
 export class TaskManagementPresentationComponent implements OnInit {
 
-  
+  @Output() emitTaskFormData: EventEmitter<any>;
 
-  public cardFormFlag: boolean = false;
+  public newTaskFormFlag: boolean = false;
+  public onProgressFormFlag: boolean = false;
+  public onReviewFormFlag: boolean = false;
+  public completedFormFlag: boolean = false;
+  public formtype: string = '';
 
-  constructor(private _ps:ProjectsService) { }
+  constructor() {
+    this.emitTaskFormData = new EventEmitter();
+  }
 
   ngOnInit(): void {
   }
 
-  createTask() {
-    this.cardFormFlag ? this.cardFormFlag = false : this.cardFormFlag = true ;
+  openForm(flag: string) {
+    switch (flag) {
+      case 'newTaskFormFlag': this.newTaskFormFlag ? this.newTaskFormFlag = false : this.newTaskFormFlag = true; if (this.newTaskFormFlag) this.formtype = "New"; break;
+      case 'onProgressFormFlag': this.onProgressFormFlag ? this.onProgressFormFlag = false : this.onProgressFormFlag = true; if (this.onProgressFormFlag) this.formtype = "On Progress"; break;
+      case 'onReviewFormFlag': this.onReviewFormFlag ? this.onReviewFormFlag = false : this.onReviewFormFlag = true; if (this.onReviewFormFlag) this.formtype = "On Review"; break;
+      case 'completedFormFlag': this.completedFormFlag ? this.completedFormFlag = false : this.completedFormFlag = true; if (this.completedFormFlag) this.formtype = "Completed"; break;
+    }
+  }
+
+  taskFormData(event: any) {
+    this.emitTaskFormData.emit(event)
   }
 
   newtask = [
@@ -96,7 +111,7 @@ export class TaskManagementPresentationComponent implements OnInit {
     }
   ];
 
-  drop(event: CdkDragDrop<String[]>| any) {
+  drop(event: CdkDragDrop<String[]> | any) {
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {

@@ -9,6 +9,121 @@
       "category": "Corporate Website",
       "billingType": "Fix",
       "projectStatus": "According to plan",
+      "taskList": [
+        {
+          "taskId": 0,
+          "taskImage": "",
+          "taskTag": [
+            {
+              "item_id": 3,
+              "item_text": "Pune"
+            },
+            {
+              "item_id": 4,
+              "item_text": "Navsari"
+            }
+          ],
+          "taskTitle": "hello my new friend 1",
+          "taskDescription": "something here osome quick example text to build on on the card title and make up the bulk of the card's"
+        },
+        {
+          "taskId": 1,
+          "taskImage": "",
+          "taskTag": [
+            {
+              "item_id": 3,
+              "item_text": "Pune"
+            },
+            {
+              "item_id": 4,
+              "item_text": "Navsari"
+            }
+          ],
+          "taskTitle": "   Support for using the ngM",
+          "taskDescription": "  reactive form directives has been deprecated in Angular v6 and will be removed",
+          "taskFormType": "New"
+        },
+        {
+          "taskId": 2,
+          "taskImage": "",
+          "taskTag": [
+            {
+              "item_id": 3,
+              "item_text": "Pune"
+            },
+            {
+              "item_id": 4,
+              "item_text": "Navsari"
+            }
+          ],
+          "taskTitle": "ture version of Angula",
+          "taskDescription": "Angular is running in development mode. Call enableProdMode() to enable production ",
+          "taskFormType": "On Progress"
+        },
+        {
+          "taskId": 3,
+          "taskImage": "",
+          "taskTag": [
+            {
+              "item_id": 1,
+              "item_text": "Mumbai"
+            },
+            {
+              "item_id": 2,
+              "item_text": "Bangaluru"
+            }
+          ],
+          "taskTitle": "webpack-dev-server",
+          "taskDescription": "Server started: Hot Module Replacement disabled, Live Reloading enabled, Progress disabled, Overlay enabled.",
+          "taskFormType": "On Review"
+        },
+        {
+          "taskId": 4,
+          "taskImage": "",
+          "taskTag": [
+            {
+              "item_id": 1,
+              "item_text": "Mumbai"
+            },
+            {
+              "item_id": 2,
+              "item_text": "Bangaluru"
+            },
+            {
+              "item_id": 3,
+              "item_text": "Pune"
+            },
+            {
+              "item_id": 4,
+              "item_text": "Navsari"
+            },
+            {
+              "item_id": 5,
+              "item_text": "New Delhi"
+            }
+          ],
+          "taskTitle": "Angular is running",
+          "taskDescription": "Angular is running in development mode. Call enableProdMode() to enable production mode.",
+          "taskFormType": "Completed"
+        },
+        {
+          "taskId": 5,
+          "taskImage": "",
+          "taskTag": [
+            {
+              "item_id": 3,
+              "item_text": "Pune"
+            },
+            {
+              "item_id": 4,
+              "item_text": "Navsari"
+            }
+          ],
+          "taskTitle": "hello my new friend",
+          "taskDescription": "mething here osome quick example text to build on on the card title and make up the bulk of the card's",
+          "taskFormType": "New"
+        }
+      ],
       "id": 1
     },
     {
@@ -20,6 +135,7 @@
       "category": "Non-Profit",
       "billingType": "Fix",
       "projectStatus": "New",
+      "taskList": [],
       "id": 2
     },
     {
@@ -31,6 +147,7 @@
       "category": "Non-Profit",
       "billingType": "Fix",
       "projectStatus": "New",
+      "taskList": [],
       "id": 3
     },
     {
@@ -42,7 +159,20 @@
       "category": "Non-Profit",
       "billingType": "Fix",
       "projectStatus": "New",
+      "taskList": [],
       "id": 4
+    },
+    {
+      "projectName": "StrataScratch - The Place To Master Coding",
+      "projectDescription": "Angular is running in development mode. Call enableProdMode() to enable production mode.\nindex.js:551 [webpack-dev-server] App updated. Recompiling...\nindex.js:551 [webpack-dev-server] Nothing changed.",
+      "projectManager": "Tanmay Patel",
+      "projectStartDate": "2022-10-13",
+      "projectEstimatedEndDate": "2022-10-22",
+      "category": "Non-Profit",
+      "billingType": "Fix",
+      "projectStatus": "New",
+      "taskList": [],
+      "id": 5
     }
   ],
   "comments": [

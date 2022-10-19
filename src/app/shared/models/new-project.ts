@@ -1,3 +1,5 @@
+import { TaskForm } from "./task-form";
+
 export class NewProject {
     public id: number;
     public projectName: string;
@@ -8,6 +10,7 @@ export class NewProject {
     public category: string;
     public billingType: string;
     public projectStatus: string;
+    public taskList: TaskForm[];
     constructor(
         id:number,
         projectName: string,
@@ -17,7 +20,8 @@ export class NewProject {
         projectEstimatedEndDate: string,
         category: string,
         billingType: string,
-        projectStatus: string
+        projectStatus: string,
+        taskList: TaskForm[]
     ){
         this.id = id;
         this.projectName = projectName;
@@ -28,5 +32,6 @@ export class NewProject {
         this.category = category;
         this.billingType = billingType;
         this.projectStatus = projectStatus;
+        this.taskList = taskList;
     }
 }

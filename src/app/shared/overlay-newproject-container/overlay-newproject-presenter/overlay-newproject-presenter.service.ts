@@ -27,6 +27,7 @@ export class OverlayNewprojectPresenterService {
       category: ['', Validators.required],
       billingType: ['', Validators.required],
       projectStatus: ['', Validators.required],
+      taskList: [[]],
     })
   }
 

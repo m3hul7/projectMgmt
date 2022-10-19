@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ProjectsRoutingModule } from './projects-routing.module';
 
+import { SharedModule } from '../shared/shared.module';
 import { FilesContainerComponent } from './files-container/files-container.component';
 import { FilesPresentationComponent } from './files-container/files-presentation/files-presentation.component';
 import { OverviewContainerComponent } from './overview-container/overview-container.component';
@@ -16,9 +17,6 @@ import { TaskManagementContainerComponent } from './task-management-container/ta
 import { TaskManagementPresentationComponent } from './task-management-container/task-management-presentation/task-management-presentation.component';
 import { TimelineContainerComponent } from './timeline-container/timeline-container.component';
 import { TimelinePresentationComponent } from './timeline-container/timeline-presentation/timeline-presentation.component';
-import { SharedModule } from '../shared/shared.module';
-import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
-import { FormsModule } from '@angular/forms';
 
 
 

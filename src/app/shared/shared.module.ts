@@ -8,9 +8,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CardContainerComponent } from './card-container/card-container.component';
 import { CardPresentationComponent } from './card-container/card-presentation/card-presentation.component';
 import { PracticeComponent } from './practice/practice.component';
-import { CardFormContainerComponent } from './card-form-container/card-form-container.component';
-import { CardFormPresentationComponent } from './card-form-container/card-form-presentation/card-form-presentation.component';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
+import { PageloaderComponent } from './pageloader/pageloader.component';
+import { TaskFormContainerComponent } from './task-form-container/task-form-container.component';
+import { TaskFormPresentationComponent } from './task-form-container/task-form-presentation/task-form-presentation.component';
 
 
 
@@ -21,8 +22,9 @@ import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
     CardContainerComponent,
     CardPresentationComponent,
     PracticeComponent,
-    CardFormContainerComponent,
-    CardFormPresentationComponent
+    PageloaderComponent,
+    TaskFormContainerComponent,
+    TaskFormPresentationComponent
   ],
   imports: [
     CommonModule,
@@ -34,7 +36,8 @@ import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
   ],
   exports: [
    CardContainerComponent,
-   CardFormContainerComponent
+   TaskFormContainerComponent,
+   PageloaderComponent
   ]
 })
 export class SharedModule { }

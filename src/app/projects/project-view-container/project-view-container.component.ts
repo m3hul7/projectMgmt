@@ -1,6 +1,7 @@
 import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { NewProject } from 'src/app/shared/models/new-project';
+import { PageloaderService } from 'src/app/shared/services/pageloader.service';
 import { ProjectsService } from '../services/projects.service';
 
 @Component({
@@ -19,8 +20,7 @@ export class ProjectViewContainerComponent implements OnInit{
   }
 
   relevantProject(id: number) {
-    this.specificProject$ = this._ps.getSpecificProject(id);
+    this.specificProject$ = this._ps.getSpecificProject(id);    
   }
-
 
 }
