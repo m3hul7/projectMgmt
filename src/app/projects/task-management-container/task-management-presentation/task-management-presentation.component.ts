@@ -1,6 +1,8 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
+import { NewProject } from 'src/app/shared/models/new-project';
+import { Observable } from 'rxjs';
 
 
 
@@ -18,12 +20,24 @@ export class TaskManagementPresentationComponent implements OnInit {
   public onReviewFormFlag: boolean = false;
   public completedFormFlag: boolean = false;
   public formtype: string = '';
-
+  public taskList: any[] = []
+  public newTask: any[] = []
+  public progress: any[] = []
+  public review: any[] = []
+  public complete: any[] = []
+  @Input() public projectData: Observable<NewProject>;
+  
   constructor() {
     this.emitTaskFormData = new EventEmitter();
   }
 
   ngOnInit(): void {
+    this.projectData.subscribe(data => {
+      this.newTask = data.taskList.filter(val => val.taskFormType === "New")
+      this.progress = data.taskList.filter(val => val.taskFormType === "On Progress")
+      this.review = data.taskList.filter(val => val.taskFormType === "On Review")
+      this.complete = data.taskList.filter(val => val.taskFormType === "Completed")
+    })
   }
 
   openForm(flag: string) {
@@ -39,80 +53,10 @@ export class TaskManagementPresentationComponent implements OnInit {
     this.emitTaskFormData.emit(event)
   }
 
-  newtask = [
-    {
-      tag: "web app Design",
-      title: "hello my new friend 1",
-      description: "something here osome quick example text to build on on the card title and make up the bulk of the card's"
-    },
-    {
-      tag: "web app Design",
-      title: "hello my new friend 2",
-      description: "something here osome quick example text to build on on the card title and make up the bulk of the card's"
-    },
-    {
-      tag: "web app Design",
-      title: "hello my new friend 3",
-      description: "something here osome quick example text to build on on the card title and make up the bulk of the card's"
-    }
-  ];
-
-  progress = [
-    {
-      tag: "web app Design 1",
-      title: "hello my on progress friend 1",
-      description: "something here osome quick example text to build on on the card title and make up the bulk of the card's"
-    },
-    {
-      tag: "web app Design 2",
-      title: "hello my on progress friend 2",
-      description: "something here osome quick example text to build on on the card title and make up the bulk of the card's"
-    },
-    {
-      tag: "web app Design 2",
-      title: "hello my on progress friend 2",
-      description: "something here osome quick example text to build on on the card title and make up the bulk of the card's"
-    }
-  ]
-
-  review = [
-    {
-      tag: "web app Design",
-      title: "hello my on review friend 1",
-      description: "something here osome quick example text to build on on the card title and make up the bulk of the card's"
-    },
-    {
-      tag: "web app Design",
-      title: "hello my on review friend 2",
-      description: "something here osome quick example text to build on on the card title and make up the bulk of the card's"
-    },
-    {
-      tag: "web app Design",
-      title: "hello my on review friend 2",
-      description: "something here osome quick example text to build on on the card title and make up the bulk of the card's"
-    }
-  ];
-
-  complete = [
-    {
-      tag: "web app Design",
-      title: "hello my finished friend 1",
-      description: "something here osome quick example text to build on on the card title and make up the bulk of the card's"
-    },
-    {
-      tag: "web app Design",
-      title: "hello my finished friend 2",
-      description: "something here osome quick example text to build on on the card title and make up the bulk of the card's"
-    },
-    {
-      tag: "web app Design",
-      title: "hello my finished friend 2",
-      description: "something here osome quick example text to build on on the card title and make up the bulk of the card's"
-    }
-  ];
-
   drop(event: CdkDragDrop<String[]> | any) {
     if (event.previousContainer === event.container) {
+      console.log("in array");
+      
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {
       transferArrayItem(
@@ -121,6 +65,8 @@ export class TaskManagementPresentationComponent implements OnInit {
         event.previousIndex,
         event.currentIndex,
       );
+      event.container.data[event.currentIndex].taskFormType
+      console.log(event.container)
     }
   }
 }

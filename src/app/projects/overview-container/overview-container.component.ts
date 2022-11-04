@@ -15,7 +15,7 @@ export class OverviewContainerComponent implements OnInit {
   constructor(private _ps: ProjectsService) { }
 
   ngOnInit(): void {
-    this._ps.passId$.subscribe(id => this.relevantProject(id));
+  this._ps.passId$.subscribe(id => this.relevantProject(id));
   }
 
   relevantProject(id: number) {

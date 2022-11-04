@@ -1,5 +1,4 @@
-import { Component, DoCheck, Input, OnChanges, OnInit } from '@angular/core';
-import { ProjectsService } from 'src/app/projects/services/projects.service';
+import { Component, Input, OnInit } from '@angular/core';
 import { NewProject } from 'src/app/shared/models/new-project';
 
 @Component({

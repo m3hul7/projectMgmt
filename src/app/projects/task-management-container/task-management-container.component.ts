@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { NewProject } from 'src/app/shared/models/new-project';
 import { ProjectsService } from '../services/projects.service';
 
@@ -11,12 +12,14 @@ export class TaskManagementContainerComponent implements OnInit {
 
   private _id: number;
   private _sp: NewProject;
+  public projectData$: Observable<NewProject>;
 
   constructor(private _ps: ProjectsService) { }
 
   ngOnInit(): void {
     this._ps.passId$.subscribe(id => this._id = id);
-    this._ps.getSpecificProject(this._id).subscribe(data => this._sp = data)
+    // this._ps.getSpecificProject(this._id).subscribe(data => this._sp = data)
+    this.projectData$ = this._ps.getSpecificProject(this._id)
   }
 
   taskFormData(event:any){

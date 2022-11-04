@@ -2,10 +2,14 @@
     <div class="card-body">
         <img class="card-img-top" src="../../../../assets/images/raimond-klavins-IGZrhzBPRWE-unsplash.jpg" alt="Card image cap">
         <div class="d-flex align-items-center justify-content-between">
-            <span class="card-small-text p-1">{{item.tag}}</span>
+            <div class="d-flex flex-column">
+                <ng-container *ngFor="let tag of item.taskTag">
+                    <span class="card-small-text p-1">{{tag.item_text}}</span>
+                </ng-container>
+            </div>
             <span class="icon-more-horizontal"></span>
         </div>
-        <h6>{{item.title}}</h6>
-        <p class="card-text card-small-text">{{item.description}}</p>
+        <h6>{{item.taskTitle}}</h6>
+        <p class="card-text card-small-text">{{item.taskDescription}}</p>
     </div>
 </div>

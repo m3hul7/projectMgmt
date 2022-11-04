@@ -33,7 +33,7 @@
             <div class="card-title p-4 d-flex align-items-center justify-content-between">
                 <div class="d-flex align-items-center">
                     <span class="icon-dot-circle-o"></span>
-                    <h5 class="m-0 ps-3">New Task (2)</h5>
+                    <h5 class="m-0 ps-3">New Task ({{newTask.length}})</h5>
                 </div>
                 <div (click)="openForm('newTaskFormFlag')">
                     <span class="icon-plus"></span>
@@ -41,12 +41,12 @@
             </div>
             <div class="py-4 overflow-hidden">
                 <div class="px-4 overflow-auto h-100">
-                    <div cdkDropList [cdkDropListData]="newtask" (cdkDropListDropped)="drop($event)">
+                    <div cdkDropList [cdkDropListData]="newTask" (cdkDropListDropped)="drop($event)">
                         <ng-container *ngIf="newTaskFormFlag;">
                             <app-task-form-container (emitTaskFormData)="taskFormData($event)" [formType]="formtype"></app-task-form-container>
                         </ng-container>
-                        <ng-container *ngFor="let item of newtask">
-                            <app-card-container [items]="item"></app-card-container>
+                        <ng-container *ngFor="let item of newTask">
+                            <app-card-container [items]="item" cdkDrag></app-card-container>
                         </ng-container>
                     </div>
                 </div>
@@ -58,7 +58,7 @@
             <div class="card-title p-4 d-flex align-items-center justify-content-between">
                 <div class="d-flex align-items-center">
                     <span class="icon-dot-circle-o"></span>
-                    <h5 class="m-0 ps-3">On Progress (8)</h5>
+                    <h5 class="m-0 ps-3">On Progress ({{progress.length}})</h5>
                 </div>
                 <div (click)="openForm('onProgressFormFlag')">
                     <span class="icon-plus"></span>
@@ -71,7 +71,7 @@
                             <app-task-form-container (emitTaskFormData)="taskFormData($event)" [formType]="formtype"></app-task-form-container>
                         </ng-container>
                         <ng-container *ngFor="let item of progress">
-                            <app-card-container [items]="item"></app-card-container>
+                            <app-card-container [items]="item" cdkDrag></app-card-container>
                         </ng-container>
                     </div>
                 </div>
@@ -83,7 +83,7 @@
             <div class="card-title p-4 d-flex align-items-center justify-content-between">
                 <div class="d-flex align-items-center">
                     <span class="icon-dot-circle-o"></span>
-                    <h5 class="m-0 ps-3 bg-secondary">On Review(3)</h5>
+                    <h5 class="m-0 ps-3 bg-secondary">On Review({{review.length}})</h5>
                 </div>
                 <div (click)="openForm('onReviewFormFlag')">
                     <span class="icon-plus"></span>
@@ -96,7 +96,7 @@
                             <app-task-form-container (emitTaskFormData)="taskFormData($event)" [formType]="formtype"></app-task-form-container>
                         </ng-container>
                         <ng-container *ngFor="let item of review">
-                            <app-card-container [items]="item"></app-card-container>
+                            <app-card-container [items]="item" cdkDrag></app-card-container>
                         </ng-container>
                     </div>
                 </div>
@@ -108,7 +108,7 @@
             <div class="card-title p-4 d-flex align-items-center justify-content-between">
                 <div class="d-flex align-items-center">
                     <span class="icon-dot-circle-o"></span>
-                    <h5 class="m-0 ps-3 bg-secondary">Completed (3)</h5>
+                    <h5 class="m-0 ps-3 bg-secondary">Completed ({{complete.length}})</h5>
                 </div>
                 <div (click)="openForm('completedFormFlag')">
                     <span class="icon-plus"></span>
@@ -121,7 +121,7 @@
                             <app-task-form-container (emitTaskFormData)="taskFormData($event)" [formType]="formtype"></app-task-form-container>
                         </ng-container>
                         <ng-container *ngFor="let item of complete">
-                            <app-card-container [items]="item"></app-card-container>
+                            <app-card-container [items]="item" cdkDrag></app-card-container>
                         </ng-container>
                     </div>
                 </div>
