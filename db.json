@@ -24,7 +24,8 @@
             }
           ],
           "taskTitle": "hello my new friend 1",
-          "taskDescription": "something here osome quick example text to build on on the card title and make up the bulk of the card's"
+          "taskDescription": "something here osome quick example text to build on on the card title and make up the bulk of the card's",
+          "taskFormType": "onprogress"
         },
         {
           "taskId": 1,
@@ -41,7 +42,7 @@
           ],
           "taskTitle": "   Support for using the ngM",
           "taskDescription": "  reactive form directives has been deprecated in Angular v6 and will be removed",
-          "taskFormType": "New"
+          "taskFormType": "new"
         },
         {
           "taskId": 2,
@@ -58,7 +59,7 @@
           ],
           "taskTitle": "ture version of Angula",
           "taskDescription": "Angular is running in development mode. Call enableProdMode() to enable production ",
-          "taskFormType": "On Progress"
+          "taskFormType": "onprogress"
         },
         {
           "taskId": 3,
@@ -75,7 +76,7 @@
           ],
           "taskTitle": "webpack-dev-server",
           "taskDescription": "Server started: Hot Module Replacement disabled, Live Reloading enabled, Progress disabled, Overlay enabled.",
-          "taskFormType": "On Review"
+          "taskFormType": "new"
         },
         {
           "taskId": 4,
@@ -104,7 +105,7 @@
           ],
           "taskTitle": "Angular is running",
           "taskDescription": "Angular is running in development mode. Call enableProdMode() to enable production mode.",
-          "taskFormType": "Completed"
+          "taskFormType": "onprogress"
         },
         {
           "taskId": 5,
@@ -121,7 +122,7 @@
           ],
           "taskTitle": "hello my new friend",
           "taskDescription": "mething here osome quick example text to build on on the card title and make up the bulk of the card's",
-          "taskFormType": "New"
+          "taskFormType": "new"
         },
         {
           "taskId": 6,
@@ -138,7 +139,7 @@
           ],
           "taskTitle": "sing the ngModel ",
           "taskDescription": "hello my on progress friend 1\nsomething here osome quick example text to build on on the card",
-          "taskFormType": "New"
+          "taskFormType": "completed"
         },
         {
           "taskId": 7,
@@ -151,7 +152,7 @@
           ],
           "taskTitle": "ture version of Angula",
           "taskDescription": "llo my on review friend 1\nsomething here osome",
-          "taskFormType": "On Progress"
+          "taskFormType": "onreview"
         }
       ],
       "id": 1
@@ -164,7 +165,7 @@
       "projectEstimatedEndDate": "2022-09-22",
       "category": "Non-Profit",
       "billingType": "Fix",
-      "projectStatus": "New",
+      "projectStatus": "new",
       "taskList": [],
       "id": 2
     },
@@ -176,7 +177,7 @@
       "projectEstimatedEndDate": "2022-09-22",
       "category": "Non-Profit",
       "billingType": "Fix",
-      "projectStatus": "New",
+      "projectStatus": "new",
       "taskList": [],
       "id": 3
     },
@@ -188,7 +189,7 @@
       "projectEstimatedEndDate": "2022-09-22",
       "category": "Non-Profit",
       "billingType": "Fix",
-      "projectStatus": "New",
+      "projectStatus": "new",
       "taskList": [],
       "id": 4
     },
@@ -200,7 +201,7 @@
       "projectEstimatedEndDate": "2022-10-22",
       "category": "Non-Profit",
       "billingType": "Fix",
-      "projectStatus": "New",
+      "projectStatus": "new",
       "taskList": [],
       "id": 5
     }

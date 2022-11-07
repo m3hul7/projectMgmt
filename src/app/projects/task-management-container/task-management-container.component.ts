@@ -17,15 +17,25 @@ export class TaskManagementContainerComponent implements OnInit {
   constructor(private _ps: ProjectsService) { }
 
   ngOnInit(): void {
-    this._ps.passId$.subscribe(id => this._id = id);
-    // this._ps.getSpecificProject(this._id).subscribe(data => this._sp = data)
-    this.projectData$ = this._ps.getSpecificProject(this._id)
+    this._ps.passId$.subscribe(id => {
+      this._id = id,
+      console.log(this._id)
+      this.relevantProject(this._id)
+    });
+    // this.projectData$ = this._ps.getSpecificProject(this._id)
+  }
+  relevantProject(id: number) {
+    this.projectData$ = this._ps.getSpecificProject(id)
   }
 
   taskFormData(event:any){
     event.taskId = this._sp.taskList.length;
     this._sp.taskList.push(event)
     this._ps.postUpdatedProject(this._id, this._sp).subscribe(val => console.log("success"))                                                                                                                                                                       
+  }
+  updatedData(event:any) {
+    // console.log(event)
+    this._ps.postUpdatedProject(this._id,event).subscribe(val => console.log("updated"))
   }
 
 }

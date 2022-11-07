@@ -41,13 +41,13 @@
             </div>
             <div class="py-4 overflow-hidden">
                 <div class="px-4 overflow-auto h-100">
-                    <div cdkDropList [cdkDropListData]="newTask" (cdkDropListDropped)="drop($event)">
+                    <div class="list" cdkDropList [cdkDropListData]="newTask" (cdkDropListDropped)="drop($event)">
                         <ng-container *ngIf="newTaskFormFlag;">
                             <app-task-form-container (emitTaskFormData)="taskFormData($event)" [formType]="formtype"></app-task-form-container>
                         </ng-container>
-                        <ng-container *ngFor="let item of newTask">
-                            <app-card-container [items]="item" cdkDrag></app-card-container>
-                        </ng-container>
+                        <div class="box" *ngFor="let item of newTask"cdkDrag>
+                            <app-card-container [items]="item" ></app-card-container>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -58,7 +58,7 @@
             <div class="card-title p-4 d-flex align-items-center justify-content-between">
                 <div class="d-flex align-items-center">
                     <span class="icon-dot-circle-o"></span>
-                    <h5 class="m-0 ps-3">On Progress ({{progress.length}})</h5>
+                    <h5 class="m-0 ps-3">On Progress ({{onprogress.length}})</h5>
                 </div>
                 <div (click)="openForm('onProgressFormFlag')">
                     <span class="icon-plus"></span>
@@ -66,13 +66,13 @@
             </div>
             <div class="py-4 overflow-hidden">
                 <div class="px-4 overflow-auto h-100">
-                    <div cdkDropList [cdkDropListData]="progress" (cdkDropListDropped)="drop($event)">
+                    <div class="list" cdkDropList [cdkDropListData]="onprogress" (cdkDropListDropped)="drop($event)">
                         <ng-container *ngIf="onProgressFormFlag;">
                             <app-task-form-container (emitTaskFormData)="taskFormData($event)" [formType]="formtype"></app-task-form-container>
                         </ng-container>
-                        <ng-container *ngFor="let item of progress">
+                        <div class="box" *ngFor="let item of onprogress">
                             <app-card-container [items]="item" cdkDrag></app-card-container>
-                        </ng-container>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -83,7 +83,7 @@
             <div class="card-title p-4 d-flex align-items-center justify-content-between">
                 <div class="d-flex align-items-center">
                     <span class="icon-dot-circle-o"></span>
-                    <h5 class="m-0 ps-3 bg-secondary">On Review({{review.length}})</h5>
+                    <h5 class="m-0 ps-3 bg-secondary">On Review({{onreview.length}})</h5>
                 </div>
                 <div (click)="openForm('onReviewFormFlag')">
                     <span class="icon-plus"></span>
@@ -91,13 +91,13 @@
             </div>
             <div class="py-4 overflow-hidden">
                 <div class="px-4 overflow-y-auto h-100">
-                    <div cdkDropList [cdkDropListData]="review" (cdkDropListDropped)="drop($event)">
+                    <div class="list" cdkDropList [cdkDropListData]="onreview" (cdkDropListDropped)="drop($event)">
                         <ng-container *ngIf="onReviewFormFlag;">
                             <app-task-form-container (emitTaskFormData)="taskFormData($event)" [formType]="formtype"></app-task-form-container>
                         </ng-container>
-                        <ng-container *ngFor="let item of review">
-                            <app-card-container [items]="item" cdkDrag></app-card-container>
-                        </ng-container>
+                        <div class="box" *ngFor="let item of onreview" cdkDrag>
+                            <app-card-container [items]="item" ></app-card-container>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -116,13 +116,13 @@
             </div>
             <div class="py-4 overflow-hidden">
                 <div class="px-4 overflow-y-auto h-100">
-                    <div cdkDropList [cdkDropListData]="complete" (cdkDropListDropped)="drop($event)">
+                    <div class="list" cdkDropList [cdkDropListData]="complete" (cdkDropListDropped)="drop($event)">
                         <ng-container *ngIf="completedFormFlag;">
                             <app-task-form-container (emitTaskFormData)="taskFormData($event)" [formType]="formtype"></app-task-form-container>
                         </ng-container>
-                        <ng-container *ngFor="let item of complete">
+                        <div class="box" *ngFor="let item of complete">
                             <app-card-container [items]="item" cdkDrag></app-card-container>
-                        </ng-container>
+                        </div>
                     </div>
                 </div>
             </div>
