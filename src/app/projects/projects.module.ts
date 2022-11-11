@@ -17,6 +17,8 @@ import { TaskManagementContainerComponent } from './task-management-container/ta
 import { TaskManagementPresentationComponent } from './task-management-container/task-management-presentation/task-management-presentation.component';
 import { TimelineContainerComponent } from './timeline-container/timeline-container.component';
 import { TimelinePresentationComponent } from './timeline-container/timeline-presentation/timeline-presentation.component';
+import { DiscussionContainerComponent } from './discussion-container/discussion-container.component';
+import { DiscussionPresentationComponent } from './discussion-container/discussion-presentation/discussion-presentation.component';
 
 
 
@@ -36,6 +38,8 @@ import { TimelinePresentationComponent } from './timeline-container/timeline-pre
     FilesContainerComponent,
     TimelinePresentationComponent,
     FilesPresentationComponent,
+    DiscussionContainerComponent,
+    DiscussionPresentationComponent,
   ],
   imports: [
     CommonModule,

@@ -12,4 +12,9 @@ export class TimelinePresentationComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public prevTask = new Date('11/01/2022')
+  public latestTask  = new Date('12/25/2022')
+
+  
+
 }

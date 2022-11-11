@@ -264,9 +264,19 @@
     height: $project-search-height;
     width: $project-search-width;
     background-color: $secondary;
-    &:focus {
+    &:focus, &:focus {
         outline: none;
         caret-color: $light; 
+        box-shadow: $danger 0px 1px 200px;
+    }
+}
+#timeline-search {
+    @extend #project-search;
+    height: $timeline-search-height;
+    width: $timeline-search-width;
+    background-color: $secondary;
+    &:hover, &:focus {
+        box-shadow: $danger 35pxpx 70px 200px;
     }
 }
 #fav-projects-checkbox:checked {
