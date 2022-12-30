@@ -1,1 +1,7 @@
-<p>sign-in works!</p>
+<form [formGroup]="loginForm" (ngSubmit)="onFormSubmit()">
+    <label for="uname">User name : </label>
+    <input type="text" id="uname" name="uname" value="anonymous@mail.com">
+    <label for="pword">Password : </label>
+    <input type="text" id="pword" name="pword" value="*****************">
+    <button type="submit" [disabled]="loginForm.valid">SIGN IN</button>
+</form>

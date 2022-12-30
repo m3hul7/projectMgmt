@@ -22,10 +22,11 @@ export class TaskManagementContainerComponent implements OnInit {
       console.log(this._id)
       this.relevantProject(this._id)
     });
-    // this.projectData$ = this._ps.getSpecificProject(this._id)
+    this.projectData$ = this._ps.getSpecificProject(this._id)
   }
   relevantProject(id: number) {
     this.projectData$ = this._ps.getSpecificProject(id)
+    this._ps.getSpecificProject(this._id).subscribe(val => this._sp = val)
   }
 
   taskFormData(event:any){

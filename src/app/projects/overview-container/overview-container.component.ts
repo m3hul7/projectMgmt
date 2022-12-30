@@ -15,11 +15,15 @@ export class OverviewContainerComponent implements OnInit {
   constructor(private _ps: ProjectsService) { }
 
   ngOnInit(): void {
-  this._ps.passId$.subscribe(id => this.relevantProject(id));
+  this._ps.passId$.subscribe(id => 
+    this.relevantProject(id)
+    // console.log(id)
+    );
+
   }
 
   relevantProject(id: number) {
-    this.specificProject$ = this._ps.getSpecificProject(id);
+    this.specificProject$ = this._ps.getSpecificProject(id)
   }
 
 }

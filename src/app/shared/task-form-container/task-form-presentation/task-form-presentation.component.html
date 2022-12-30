@@ -16,6 +16,10 @@
                 <label for="cdescription">Task Description</label>
                 <textarea name="cdescription" id="cdescription" cols="25" rows="2" formControlName="taskDescription"></textarea>
             </div>
+            <div class="d-flex flex-column">
+                <label for="ctime">Estimated time</label>
+                <input type="date" id="ctime" name="ctime" formControlName="taskEndDate">
+            </div>
             <div>
                 <button type="submit">Add</button>
                 <button type="reset">Clear</button>

@@ -60,7 +60,8 @@ export class TaskFormPresentationComponent implements OnInit {
 
   onSubmit() {
     this.taskForm.value.taskFormType = this.formType;
-    // console.log(this.taskForm.value)
+    this.taskForm.value.taskStartDate = new Date().toLocaleDateString()
+    console.log(this.taskForm.value)
     this._tfps.nextFormData(this.taskForm.value)
   }
 }

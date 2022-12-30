@@ -22,7 +22,8 @@ export class TaskFormPresenterService {
       taskTag: ['',[Validators.required]],
       taskTitle: ['', [Validators.required]],
       taskDescription: ['', [Validators.required]],
-      taskFormType: ['']
+      taskFormType: [''],
+      taskEndDate: ['']
     })
   }
 

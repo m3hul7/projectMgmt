@@ -1,11 +1,16 @@
-import { Component, OnInit, ɵsetAllowDuplicateNgModuleIdsForTest } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { AfterViewInit, Component, ElementRef, Inject, Input, OnInit, Renderer2, ViewChild, ɵsetAllowDuplicateNgModuleIdsForTest } from '@angular/core';
+import { ListFilterPipe } from 'ng-multiselect-dropdown/list-filter.pipe';
+import { Observable } from 'rxjs/internal/Observable';
+import { NewProject } from 'src/app/shared/models/new-project';
+import { TaskForm } from 'src/app/shared/models/task-form';
 
 @Component({
   selector: 'app-timeline-presentation',
   templateUrl: './timeline-presentation.component.html',
   styleUrls: ['./timeline-presentation.component.scss']
 })
-export class TimelinePresentationComponent implements OnInit {
+export class TimelinePresentationComponent implements OnInit, AfterViewInit {
   public diff: number
   public prevTask: any
   public latestTask: any
@@ -13,26 +18,59 @@ export class TimelinePresentationComponent implements OnInit {
   public monthNames = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
 ]
-constructor() { this.prevTask = new Date('1/01/2022')
-this.latestTask  = new Date('2/25/2022') 
+
+@Input() projectData: Observable<NewProject>
+constructor(private renderer: Renderer2,
+  @Inject(DOCUMENT) private document: Document) { 
 }
 counter = Array
+@ViewChild('hello', { static: false }) timeline: ElementRef;
 ngOnInit(): void {
+    this.projectData.subscribe(x => {this.calculate(x.taskList)
+    })
     
-    this.diff = Math.ceil(Math.abs(this.latestTask.getTime() - this.prevTask.getTime())/(1000*60*60*24))
-    console.log(this.diff/30)
+    // this.diff = Math.ceil(Math.abs(this.latestTask.getTime() - this.prevTask.getTime())/(1000*60*60*24))
+    // console.log(this.diff/30)
     // this.getallDates(prevTask, latestTask)
-    this.getallDates() 
+    // this.getallDates() 
     console.log(this.array.length);
+    const child = this.document.createElement('div');
     
+    this.renderer.appendChild(this.timeline.nativeElement, child);
     
   }
+  
 
-  getallDates(){
-    const initMonth = this.prevTask.getMonth()
-    const initYear = this.prevTask.getFullYear()
-    const lastMonth = this.latestTask.getMonth()
-    const lastYear = this.latestTask.getFullYear()
+  calculate(list: any) {
+    const startDateArray = list.map((x: { taskStartDate: any; }) => new Date(x.taskStartDate))
+    const maxDate = new Date(Math.max(...startDateArray))
+    const minDate = new Date(Math.min(...startDateArray))
+    this.diff = Math.ceil(Math.abs(maxDate.getTime() - minDate.getTime())/(1000*60*60*24))
+    this.getallDates(maxDate, minDate)
+    console.log(maxDate, minDate, this.diff)
+    // const minDate = new Date(Math.min.apply(null, list.map(x => x.taskStartDate)))
+    // console.log(maxDate, minDate)
+  }
+  
+  ngAfterViewInit() {
+    // console.log(this.timeline.nativeElement.innerHTML); 
+    // console.log(this.timeline.nativeElement); 
+    // const child = this.document.createElement('div');
+    // this.renderer.appendChild(this.timeline.nativeElement, child);
+    // this.timeline.nativeElement.innerHTML = "DOM updated succesfully!!!";
+    
+    const div = this.renderer.createElement('div');
+    const text = this.renderer.createText('Inserted at bottom');
+ 
+    this.renderer.appendChild(div, text);
+    this.renderer.appendChild(this.timeline.nativeElement, div);
+  }
+
+  getallDates(maxDate:Date, minDate:Date){
+    const initMonth = minDate.getMonth()
+    const initYear = minDate.getFullYear()
+    const lastMonth = maxDate.getMonth()
+    const lastYear = maxDate.getFullYear()
     console.log(initMonth, "initmonth");
     
     
@@ -55,6 +93,7 @@ ngOnInit(): void {
 
     // }
   }
+  
   
 
 }

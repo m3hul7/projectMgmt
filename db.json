@@ -25,7 +25,9 @@
           ],
           "taskTitle": "hello my new friend 1",
           "taskDescription": "something here osome quick example text to build on on the card title and make up the bulk of the card's",
-          "taskFormType": "onprogress"
+          "taskFormType": "onprogress",
+          "taskEndDate": "2022-2-28",
+          "taskStartDate": "12/1/2022"
         },
         {
           "taskId": 1,
@@ -42,7 +44,9 @@
           ],
           "taskTitle": "   Support for using the ngM",
           "taskDescription": "  reactive form directives has been deprecated in Angular v6 and will be removed",
-          "taskFormType": "new"
+          "taskFormType": "new",
+          "taskEndDate": "2022-3-28",
+          "taskStartDate": "12/2/2022"
         },
         {
           "taskId": 2,
@@ -59,7 +63,9 @@
           ],
           "taskTitle": "ture version of Angula",
           "taskDescription": "Angular is running in development mode. Call enableProdMode() to enable production ",
-          "taskFormType": "onprogress"
+          "taskFormType": "onprogress",
+          "taskEndDate": "2022-4-28",
+          "taskStartDate": "12/2/2022"
         },
         {
           "taskId": 3,
@@ -76,7 +82,9 @@
           ],
           "taskTitle": "webpack-dev-server",
           "taskDescription": "Server started: Hot Module Replacement disabled, Live Reloading enabled, Progress disabled, Overlay enabled.",
-          "taskFormType": "new"
+          "taskFormType": "new",
+          "taskEndDate": "2022-5-28",
+          "taskStartDate": "12/3/2022"
         },
         {
           "taskId": 4,
@@ -105,7 +113,9 @@
           ],
           "taskTitle": "Angular is running",
           "taskDescription": "Angular is running in development mode. Call enableProdMode() to enable production mode.",
-          "taskFormType": "onprogress"
+          "taskFormType": "onprogress",
+          "taskEndDate": "2022-8-28",
+          "taskStartDate": "12/5/2022"
         },
         {
           "taskId": 5,
@@ -122,7 +132,9 @@
           ],
           "taskTitle": "hello my new friend",
           "taskDescription": "mething here osome quick example text to build on on the card title and make up the bulk of the card's",
-          "taskFormType": "new"
+          "taskFormType": "new",
+          "taskEndDate": "2022-7-28",
+          "taskStartDate": "12/6/2022"
         },
         {
           "taskId": 6,
@@ -139,7 +151,9 @@
           ],
           "taskTitle": "sing the ngModel ",
           "taskDescription": "hello my on progress friend 1\nsomething here osome quick example text to build on on the card",
-          "taskFormType": "completed"
+          "taskFormType": "completed",
+          "taskEndDate": "2022-7-28",
+          "taskStartDate": "12/6/2022"
         },
         {
           "taskId": 7,
@@ -152,7 +166,85 @@
           ],
           "taskTitle": "ture version of Angula",
           "taskDescription": "llo my on review friend 1\nsomething here osome",
-          "taskFormType": "onreview"
+          "taskFormType": "onreview",
+          "taskEndDate": "2022-8-28",
+          "taskStartDate": "12/7/2022"
+        },
+        {
+          "taskId": 8,
+          "taskImage": "",
+          "taskTag": [
+            {
+              "item_id": 3,
+              "item_text": "Pune"
+            },
+            {
+              "item_id": 4,
+              "item_text": "Navsari"
+            }
+          ],
+          "taskTitle": "sing the ngModel ",
+          "taskDescription": "It looks like you're using ngModel on the same form field as formControlName.\n  Support for using the ngModel input property and ngModelChange event with\n  reactive form directives has been deprecated in Angular v6 and will be removed\n  in a future version of Angular.\n",
+          "taskFormType": "new",
+          "taskEndDate": "2022-11-28",
+          "taskStartDate": "12/10/2022"
+        },
+        {
+          "taskId": 9,
+          "taskImage": "",
+          "taskTag": [
+            {
+              "item_id": 3,
+              "item_text": "Pune"
+            },
+            {
+              "item_id": 4,
+              "item_text": "Navsari"
+            }
+          ],
+          "taskTitle": "webpack-dev-server",
+          "taskDescription": "oks like you're using ngModel on the same form field as formControlName.\n  Support for using the ngModel input property and ngModelChange event with\n  reactive form directives has been deprecated in Angular v6 and will be removed\n  in a future ",
+          "taskFormType": "new",
+          "taskEndDate": "2022-12-28",
+          "taskStartDate": "12/10/2022"
+        },
+        {
+          "taskId": 10,
+          "taskImage": "",
+          "taskTag": [
+            {
+              "item_id": 3,
+              "item_text": "Pune"
+            },
+            {
+              "item_id": 4,
+              "item_text": "Navsari"
+            }
+          ],
+          "taskTitle": "ture version of Angula",
+          "taskDescription": " looks like you're using ngModel on the same form field as formControlName.\n  Support for using the ngModel input property and ngModelChange event with\n  reactive form directives has been deprecated in Angular v6 and will be removed\n  in a future version of Angular.\n",
+          "taskFormType": "onprogress",
+          "taskEndDate": "2022-12-28",
+          "taskStartDate": "12/11/2022"
+        },
+        {
+          "taskId": 11,
+          "taskImage": "",
+          "taskTag": [
+            {
+              "item_id": 3,
+              "item_text": "Pune"
+            },
+            {
+              "item_id": 4,
+              "item_text": "Navsari"
+            }
+          ],
+          "taskTitle": "webpack-dev-server",
+          "taskDescription": "trolName.\n  Support for using the ngModel input property and ngModelChange event with\n  reactive form directives has been deprecated in Angular v6 and will be removed\n  in a future",
+          "taskFormType": "onreview",
+          "taskEndDate": "2022-8-28",
+          "taskStartDate": "12/12/2022"
         }
       ],
       "id": 1

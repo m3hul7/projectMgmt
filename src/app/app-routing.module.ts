@@ -1,8 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MasterComponent } from './core/master/master.component';
+import { SignInComponent } from './core/sign-in/sign-in.component';
 
 const routes: Routes = [
+  {
+    path: 'login',
+    component: SignInComponent
+  },
   {
     path: '',
     component: MasterComponent,

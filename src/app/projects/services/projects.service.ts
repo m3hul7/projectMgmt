@@ -32,6 +32,10 @@ export class ProjectsService {
   getSpecificProject(id: number): Observable<NewProject> {
     return this._http.get<NewProject>(`${this._apiLink}/projects/${id}`);
   }
+  
+  // getSpecificProject(id: number){
+  //   this._http.get<NewProject>(`${this._apiLink}/projects/${id}`).subscribe(x => console.log(x));
+  // }
 
   postUpdatedProject(id: number, updatedData:any): Observable<any> {
     return this._http.patch<any>(`${this._apiLink}/projects/${id}`,updatedData)
